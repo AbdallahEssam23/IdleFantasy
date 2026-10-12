@@ -574,9 +574,9 @@
     <string name="combat_last_run">Poslední: %1$d zabito, %2$d jídla</string>
     <!-- Translator note: %1$d = kills -->
     <string name="combat_last_run_died">Poslední: zemřel (%1$d zabití)</string>
-    <string name="combat_atk">ÚTOK</string>
-    <string name="combat_str">SÍLA</string>
-    <string name="combat_def">OBRANA</string>
+    <string name="combat_atk">ÚTK</string>
+    <string name="combat_str">SIL</string>
+    <string name="combat_def">OBR</string>
     <!-- Translator note: %1$d = HP healed -->
     <string name="combat_heals_hp">léčí %1$d životů</string>
     <string name="combat_defeated_so_far">dosud poraženo.</string>
@@ -672,7 +672,7 @@
     <string name="profile_choose_slot">Vyber %1$s</string>
     <string name="profile_no_items">V inventáři nemáš žádné použitelné předměty</string>
     <string name="profile_stat_atk">Útok</string>
-    <string name="profile_stat_str">Obrana</string>
+    <string name="profile_stat_str">Síla</string>
     <string name="profile_stat_ranged">Střelba</string>
     <string name="profile_stat_magic">Magie</string>
     <string name="profile_stat_mining">Dolování</string>
@@ -1040,8 +1040,8 @@
     <string name="guild_name_mercantile">Cech obchodníků</string>
     <string name="guild_name_construction">Cech stavitelů</string>
     <string name="guild_name_slayer">Popravčí cech</string>
-    <string name="guild_quest_desc_slayer_task">Splň %1$d úkolů mistra popravčího pro %2$s.</string>
-    <string name="guild_quest_desc_slayer_kill">Poraž %1$d nepřátel při plnění úkolu mistra popravčího.</string>
+    <string name="guild_quest_desc_slayer_task">Splň %1$d úkolů Mistra popravčího pro %2$s.</string>
+    <string name="guild_quest_desc_slayer_kill">Poraž %1$d nepřátel při plnění úkolu Mistra popravčího.</string>
 
     <!-- Mercantile skill -->
     <string name="skill_mercantile">Obchodování</string>
@@ -1097,13 +1097,13 @@
     <string name="blessing_stone_skin_ii_name">Kamenná kůže II</string>
     <string name="blessing_blessed_focus_iii_name">Požehnané soustředění III</string>
     <string name="blessing_stone_skin_iii_name">Kamenná kůže III</string>
-    <string name="blessing_tithe_blessing_name">Požehnání desátku</string>
+    <string name="blessing_tithe_blessing_name">Nebeské soustředění</string>
     <string name="blessing_stone_skin_iv_name">Kamenná kůže IV</string>
     <string name="blessing_fortune_i_name">Štěstí I</string>
-    <string name="blessing_tithe_blessing_ii_name">Požehnání desátku II</string>
+    <string name="blessing_tithe_blessing_ii_name">Nebeské soustředění II</string>
     <string name="blessing_iron_ward_name">Železná ochrana</string>
     <string name="blessing_fortune_ii_name">Štěstí II</string>
-    <string name="blessing_tithe_blessing_iii_name">Požehnání desátku III</string>
+    <string name="blessing_tithe_blessing_iii_name">Nebeské soustředění III</string>
     <string name="blessing_iron_ward_ii_name">Železná ochrana II</string>
     <string name="blessing_fortune_iii_name">Štěstí III</string>
     <string name="blessing_divine_focus_name">Božské soustředění</string>
@@ -2133,7 +2133,7 @@
     <string name="tower_milestone_staff">%1$s (magic attack +68, magic damage +18, infinite runes) + 1,000,000 coins</string> <!-- untranslated -->
     <string name="tower_enemies_this_floor">Enemies</string> <!-- untranslated -->
     <string name="tower_enemy_strength">Enemy strength: %1$s%%</string> <!-- untranslated -->
-    <string name="tower_entry_card_desc">Endless floors. How far can you climb?</string> <!-- untranslated -->
+    <string name="tower_entry_card_desc">Nekonečno pater. Jak vysoko dokážeš vylézt?</string>
     <string name="tower_collect_prompt">Collect your tower run</string> <!-- untranslated -->
     <string name="tower_home_collect_hint">Open the Tower screen to collect this run</string> <!-- untranslated -->
 
