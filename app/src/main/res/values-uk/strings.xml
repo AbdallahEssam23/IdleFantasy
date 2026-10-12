@@ -2412,16 +2412,16 @@
     <string name="ironman_badge">Ironman</string> <!-- untranslated -->
     <string name="settings_imported_demoted">Save imported. It was modified outside the game, so Ironman status was removed.</string> <!-- untranslated -->
     <string name="shop_xp_boost_name">2× XP Boost (48h)</string> <!-- untranslated -->
-    <string name="bestiary_stat_hp">HP</string> <!-- untranslated -->
-    <string name="bestiary_stat_attack">Attack</string> <!-- untranslated -->
-    <string name="bestiary_stat_strength">Strength</string> <!-- untranslated -->
-    <string name="bestiary_stat_defense">Defense</string> <!-- untranslated -->
+    <string name="bestiary_stat_hp">HP</string>
+    <string name="bestiary_stat_attack">Атака</string>
+    <string name="bestiary_stat_strength">Сила</string>
+    <string name="bestiary_stat_defense">Захист</string>
     <string name="bestiary_stat_atk_defense">Atk Defense</string> <!-- untranslated -->
     <string name="bestiary_stat_str_defense">Str Defense</string> <!-- untranslated -->
     <string name="bestiary_stat_rng_defense">Rng Defense</string> <!-- untranslated -->
     <string name="bestiary_stat_mag_defense">Mag Defense</string> <!-- untranslated -->
-    <string name="bestiary_stat_xp">XP</string> <!-- untranslated -->
-    <string name="bestiary_stat_required_level">Required Level</string> <!-- untranslated -->
+    <string name="bestiary_stat_xp">XP</string>
+    <string name="bestiary_stat_required_level">Необхідний Рівень</string>
     <string name="bestiary_stat_xp_reward">XP Reward</string> <!-- untranslated -->
     <string name="bestiary_stat_duration">Duration</string> <!-- untranslated -->
     <string name="bestiary_stat_duration_min">%1$d min</string> <!-- untranslated -->
@@ -2443,8 +2443,8 @@
     <string name="farming_crop_picker_stats">Lv. %1$d  •  %2$s  •  %3$d XP/crop</string> <!-- untranslated -->
     <string name="farming_seeds_owned">Seeds: %1$d  •  Owned: %2$d</string> <!-- untranslated -->
     <!-- ============ Prestige overhaul (v1.14.0) ============ -->
-    <string name="prestige_title">Prestige</string> <!-- untranslated -->
-    <string name="prestige_open_tree">View tree</string> <!-- untranslated -->
+    <string name="prestige_title">Престиж</string>
+    <string name="prestige_open_tree">Переглянути дерево</string>
     <!-- Translator note: %1$d = unspent prestige points -->
     <string name="prestige_points_available">%1$d points available</string> <!-- untranslated -->
     <!-- Translator note: %1$d = lifetime points earned, %2$d = maximum points for this skill -->
@@ -2468,7 +2468,7 @@
     <string name="prestige_respec_on_cooldown">Points were reset recently. Try again later.</string> <!-- untranslated -->
     <!-- Translator note: %1$d = node cost in points -->
     <string name="prestige_node_cost">Cost: %1$d points</string> <!-- untranslated -->
-    <string name="prestige_node_owned">Purchased</string> <!-- untranslated -->
+    <string name="prestige_node_owned">Придбано</string>
     <string name="prestige_path_auto_label">Earned by prestiging</string> <!-- untranslated -->
     <string name="prestige_node_auto_earned">Earned at prestige %1$d.</string> <!-- untranslated -->
     <string name="prestige_node_auto_pending">Unlocks automatically at prestige %1$d.</string> <!-- untranslated -->
@@ -2534,8 +2534,8 @@
     <string name="prestige_path_magic_runethrift">Rune Thrift</string> <!-- untranslated -->
     <string name="prestige_path_construction_efficient">Efficient Builder</string> <!-- untranslated -->
     <string name="prestige_path_prayer_devotion">Devotion</string> <!-- untranslated -->
-    <string name="prestige_path_mercantile_trade">Trade Baron</string> <!-- untranslated -->
-    <string name="prestige_path_slayer_bounty">Bounty Hunter</string> <!-- untranslated -->
+    <string name="prestige_path_mercantile_trade">Торговий Барон</string>
+    <string name="prestige_path_slayer_bounty">Головоріз</string>
     <string name="prestige_path_ranged_quiver">Quiver Care</string> <!-- untranslated -->
     <string name="prestige_path_defense_laststand">Last Stand</string> <!-- untranslated -->
     <string name="prestige_path_hitpoints_constitution">Constitution</string> <!-- untranslated -->
@@ -2553,12 +2553,12 @@
 
     <!-- Prestige path names (skill flavored) -->
     <string name="prestige_path_mining_yield">Purer Ore</string> <!-- untranslated -->
-    <string name="prestige_path_fishing_yield">More Fish</string> <!-- untranslated -->
-    <string name="prestige_path_woodcutting_yield">Sharper Axe</string> <!-- untranslated -->
+    <string name="prestige_path_fishing_yield">Більше риби</string>
+    <string name="prestige_path_woodcutting_yield">Гостріша Сокира</string>
     <string name="prestige_path_thieving_yield">Faster Picking</string> <!-- untranslated -->
     <string name="prestige_path_slayer_yield">Hunter\'s Instinct</string> <!-- untranslated -->
-    <string name="prestige_path_attack_prowess">Precision</string> <!-- untranslated -->
-    <string name="prestige_path_strength_prowess">Might</string> <!-- untranslated -->
+    <string name="prestige_path_attack_prowess">Точність</string>
+    <string name="prestige_path_strength_prowess">Міць</string>
     <string name="prestige_path_defense_prowess">Bulwark</string> <!-- untranslated -->
     <string name="prestige_path_ranged_prowess">Deadeye</string> <!-- untranslated -->
     <string name="prestige_path_magic_prowess">Attunement</string> <!-- untranslated -->
@@ -2583,7 +2583,7 @@
     <string name="prestige_path_hitpoints_race_orc">Thick Hide</string> <!-- untranslated -->
 
     <!-- Race change -->
-    <string name="race_change_confirm_title">Change race?</string> <!-- untranslated -->
+    <string name="race_change_confirm_title">Змінити расу?</string>
     <string name="item_race_change_token_name">Race Change Token</string> <!-- untranslated -->
     <string name="item_race_change_token_desc">A rare boss drop that lets you change your character\'s race once.</string> <!-- untranslated -->
     <!-- Translator note: %1$d = number of tokens owned -->

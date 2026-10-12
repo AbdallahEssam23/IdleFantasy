@@ -31,15 +31,15 @@
     <string name="skill_herblore_desc">Brew potions from farming herbs and dungeon reagents to boost your combat stats.</string> <!-- untranslated -->
 
     <!-- Combat skills -->
-    <string name="skill_attack_name">Attack</string> <!-- untranslated -->
+    <string name="skill_attack_name">Атака</string>
     <string name="skill_attack_desc">Improves your melee accuracy, increasing your chance to hit.</string> <!-- untranslated -->
-    <string name="skill_strength_name">Strength</string> <!-- untranslated -->
+    <string name="skill_strength_name">Сила</string>
     <string name="skill_strength_desc">Increases your maximum melee damage per hit.</string> <!-- untranslated -->
-    <string name="skill_defense_name">Defense</string> <!-- untranslated -->
+    <string name="skill_defense_name">Захист</string>
     <string name="skill_defense_desc">Reduces the damage you take from enemy attacks.</string> <!-- untranslated -->
     <string name="skill_ranged_name">Ranged</string> <!-- untranslated -->
     <string name="skill_ranged_desc">Attack enemies from a safe distance using a bow and arrows.</string> <!-- untranslated -->
-    <string name="skill_magic_name">Magic</string> <!-- untranslated -->
+    <string name="skill_magic_name">Магія</string>
     <string name="skill_magic_desc">Cast powerful spells using runes. Higher levels unlock stronger spells.</string> <!-- untranslated -->
     <string name="skill_hitpoints_name">Hitpoints</string> <!-- untranslated -->
     <string name="skill_hitpoints_desc">Your total health. Higher levels let you survive longer in combat.</string> <!-- untranslated -->
@@ -72,7 +72,7 @@
     <string name="tree_starwood_tree_name">Starwood Tree</string> <!-- untranslated -->
 
     <!-- ===== Agility course names and descriptions ===== -->
-    <string name="agility_beginner_course_name">Beginner Course</string> <!-- untranslated -->
+    <string name="agility_beginner_course_name">Курс Початківця</string>
     <string name="agility_beginner_course_desc">A simple obstacle course for those just starting their agility training.</string> <!-- untranslated -->
     <string name="agility_novice_course_name">Novice Course</string> <!-- untranslated -->
     <string name="agility_novice_course_desc">A slightly more challenging course with basic obstacles.</string> <!-- untranslated -->

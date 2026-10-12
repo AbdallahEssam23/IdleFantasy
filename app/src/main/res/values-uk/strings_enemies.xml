@@ -18,27 +18,27 @@
     <string name="enemy_demon_name">Lesser Demon</string> <!-- untranslated -->
     <string name="enemy_dragon_name">Green Dragon</string> <!-- untranslated -->
     <string name="enemy_imp_name">Imp</string> <!-- untranslated -->
-    <string name="enemy_chicken_name">Chicken</string> <!-- untranslated -->
-    <string name="enemy_sheep_name">Sheep</string> <!-- untranslated -->
-    <string name="enemy_cow_name">Cow</string> <!-- untranslated -->
+    <string name="enemy_chicken_name">Курка</string>
+    <string name="enemy_sheep_name">Вівця</string>
+    <string name="enemy_cow_name">Корова</string>
     <string name="enemy_fire_giant_name">Fire Giant</string> <!-- untranslated -->
     <string name="enemy_ancient_guardian_name">Ancient Guardian</string> <!-- untranslated -->
-    <string name="enemy_lich_name">Lich</string> <!-- untranslated -->
-    <string name="enemy_cave_troll_name">Cave Troll</string> <!-- untranslated -->
+    <string name="enemy_lich_name">Ліч</string>
+    <string name="enemy_cave_troll_name">Печерний Троль</string>
     <string name="enemy_mine_spider_name">Mine Spider</string> <!-- untranslated -->
-    <string name="enemy_rock_golem_name">Rock Golem</string> <!-- untranslated -->
-    <string name="enemy_iron_golem_name">Iron Golem</string> <!-- untranslated -->
+    <string name="enemy_rock_golem_name">Кам\'яний Голем</string>
+    <string name="enemy_iron_golem_name">Залізний Голем</string>
     <string name="enemy_forge_demon_name">Forge Demon</string> <!-- untranslated -->
     <string name="enemy_dwarven_guardian_name">Dwarven Guardian</string> <!-- untranslated -->
     <string name="enemy_drowned_cultist_name">Drowned Cultist</string> <!-- untranslated -->
-    <string name="enemy_sea_spirit_name">Sea Spirit</string> <!-- untranslated -->
+    <string name="enemy_sea_spirit_name">Дух Моря</string>
     <string name="enemy_cursed_fisherman_name">Cursed Fisherman</string> <!-- untranslated -->
     <string name="enemy_abyssal_leech_name">Abyssal Leech</string> <!-- untranslated -->
     <string name="enemy_deep_horror_name">Deep Horror</string> <!-- untranslated -->
     <string name="enemy_void_guardian_name">Void Guardian</string> <!-- untranslated -->
     <string name="enemy_corrupted_druid_name">Corrupted Druid</string> <!-- untranslated -->
     <string name="enemy_vine_beast_name">Vine Beast</string> <!-- untranslated -->
-    <string name="enemy_forest_spirit_name">Forest Spirit</string> <!-- untranslated -->
+    <string name="enemy_forest_spirit_name">Дух Лісу</string>
     <string name="enemy_shadow_beast_name">Shadow Beast</string> <!-- untranslated -->
     <string name="enemy_twisted_treant_name">Twisted Treant</string> <!-- untranslated -->
     <string name="enemy_corrupted_mage_name">Corrupted Mage</string> <!-- untranslated -->
@@ -61,7 +61,7 @@
     <string name="enemy_rift_guardian_name">Rift Guardian</string> <!-- untranslated -->
     <string name="enemy_chaos_elemental_name">Chaos Elemental</string> <!-- untranslated -->
     <string name="enemy_frost_giant_name">Морозний гігант</string>
-    <string name="enemy_ice_golem_name">Ice Golem</string> <!-- untranslated -->
+    <string name="enemy_ice_golem_name">Льодяний Голем</string>
     <string name="enemy_glacial_mage_name">Glacial Mage</string> <!-- untranslated -->
     <string name="enemy_abyssal_lord_name">Abyssal Lord</string> <!-- untranslated -->
     <string name="enemy_eternal_sentinel_name">Eternal Sentinel</string> <!-- untranslated -->
@@ -70,7 +70,7 @@
     <string name="enemy_abyssal_guardian_name">Abyssal Guardian</string> <!-- untranslated -->
     <string name="enemy_shadow_thief_name">Shadow Thief</string> <!-- untranslated -->
     <string name="enemy_elder_lich_name">Elder Lich</string> <!-- untranslated -->
-    <string name="enemy_assassin_name">Assassin</string> <!-- untranslated -->
+    <string name="enemy_assassin_name">Асасін</string>
     <string name="enemy_shadow_assassin_name">Shadow Assassin</string> <!-- untranslated -->
     <string name="enemy_vault_guardian_name">Vault Guardian</string> <!-- untranslated -->
     <string name="enemy_guild_master_name">Guild Master</string> <!-- untranslated -->
@@ -78,15 +78,15 @@
     <!-- ===== Dungeon names and descriptions ===== -->
     <string name="dungeon_imp_cavern_name">Imp Cavern</string> <!-- untranslated -->
     <string name="dungeon_imp_cavern_desc">A shallow cave filled with mischievous imps. Perfect for absolute beginners!</string> <!-- untranslated -->
-    <string name="dungeon_goblin_cave_name">Goblin Cave</string> <!-- untranslated -->
+    <string name="dungeon_goblin_cave_name">Печера Гоблінів</string>
     <string name="dungeon_goblin_cave_desc">A dark cave infested with goblins and giant rats. A good place for new adventurers to train.</string> <!-- untranslated -->
     <string name="dungeon_spider_den_name">Spider Den</string> <!-- untranslated -->
     <string name="dungeon_spider_den_desc">A web-filled cavern crawling with venomous spiders. Bring antivenom!</string> <!-- untranslated -->
-    <string name="dungeon_bandit_camp_name">Bandit Camp</string> <!-- untranslated -->
+    <string name="dungeon_bandit_camp_name">Табір Бандитів</string>
     <string name="dungeon_bandit_camp_desc">A hideout of thieves and rogues in the wilderness. Watch your coin purse!</string> <!-- untranslated -->
     <string name="dungeon_undead_crypt_name">Undead Crypt</string> <!-- untranslated -->
     <string name="dungeon_undead_crypt_desc">An ancient burial ground where the dead refuse to rest. Beware the dark magic!</string> <!-- untranslated -->
-    <string name="dungeon_fortress_ruins_name">Fortress Ruins</string> <!-- untranslated -->
+    <string name="dungeon_fortress_ruins_name">Руїни Фортеці</string>
     <string name="dungeon_fortress_ruins_desc">The crumbling remains of an ancient castle, now guarded by knights and soldiers.</string> <!-- untranslated -->
     <string name="dungeon_orc_stronghold_name">Orc Stronghold</string> <!-- untranslated -->
     <string name="dungeon_orc_stronghold_desc">A fortified orc settlement deep in the mountains. Only the brave dare enter.</string> <!-- untranslated -->
@@ -94,7 +94,7 @@
     <string name="dungeon_volcanic_depths_desc">A scorching cavern inhabited by hellhounds and lesser demons. The heat is unbearable!</string> <!-- untranslated -->
     <string name="dungeon_dragon_lair_name">Dragon\'s Lair</string> <!-- untranslated -->
     <string name="dungeon_dragon_lair_desc">The legendary home of green dragons. Only master warriors survive this challenge.</string> <!-- untranslated -->
-    <string name="dungeon_farm_name">Farm</string> <!-- untranslated -->
+    <string name="dungeon_farm_name">Ферма</string>
     <string name="dungeon_farm_desc">A peaceful farm with livestock. Great for beginners looking to gather food!</string> <!-- untranslated -->
     <string name="dungeon_infernal_stronghold_name">Infernal Stronghold</string> <!-- untranslated -->
     <string name="dungeon_infernal_stronghold_desc">A fortress of fire and brimstone, ruled by demons and hellhounds. The heat alone can kill the unprepared.</string> <!-- untranslated -->
@@ -118,11 +118,11 @@
     <string name="dungeon_blightwood_desc">A rotting forest deep past the Hollowfen, where the Gloomharvest\'s strongest horrors gather. Part of the Gloomharvest event.</string> <!-- untranslated -->
 
     <!-- ===== Raid bosses ===== -->
-    <string name="boss_king_black_dragon_name">King Black Dragon</string> <!-- untranslated -->
+    <string name="boss_king_black_dragon_name">Королівський Чорний Дракон</string>
     <string name="boss_king_black_dragon_desc">The legendary three-headed dragon, feared across the realm.</string> <!-- untranslated -->
-    <string name="boss_demon_lord_name">Demon Lord</string> <!-- untranslated -->
+    <string name="boss_demon_lord_name">Демон Лорд</string>
     <string name="boss_demon_lord_desc">An ancient demon from the abyss, master of dark magic.</string> <!-- untranslated -->
-    <string name="boss_kraken_name">Kraken</string> <!-- untranslated -->
+    <string name="boss_kraken_name">Кракен</string>
     <string name="boss_kraken_desc">The terror of the deep seas, a colossal sea monster.</string> <!-- untranslated -->
     <string name="boss_balrog_name">Gothic Ember</string> <!-- untranslated -->
     <string name="boss_balrog_desc">An ancient demon of flame and shadow, awakened from its slumber deep beneath the earth.</string> <!-- untranslated -->
@@ -156,7 +156,7 @@
     <string name="dungeon_arcane_ruins_desc">The functional underground chambers of a destroyed wizard\'s tower. Magical constructs and enchanted guardians still patrol its halls.</string> <!-- untranslated -->
     <string name="dungeon_corrupted_sanctum_name">Corrupted Sanctum</string> <!-- untranslated -->
     <string name="dungeon_corrupted_sanctum_desc">A shadow-drenched sanctum at the heart of the corrupted canopy. Dark priests and corrupted beasts guard an ancient evil.</string> <!-- untranslated -->
-    <string name="dungeon_drowned_temple_name">Drowned Temple</string> <!-- untranslated -->
+    <string name="dungeon_drowned_temple_name">Затоплений Храм</string>
     <string name="dungeon_drowned_temple_desc">A sunken temple beneath the sea grotto, its halls filled with water and sea creatures that have made it their home.</string> <!-- untranslated -->
     <string name="dungeon_rogue_sanctum_name">Rogue Sanctum</string> <!-- untranslated -->
     <string name="dungeon_rogue_sanctum_desc">The guild\'s inner refuge, accessible only to proven members.</string> <!-- untranslated -->

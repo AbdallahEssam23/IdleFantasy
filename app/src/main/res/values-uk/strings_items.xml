@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- ===== Ores ===== -->
-    <string name="item_copper_ore_name">Copper Ore</string> <!-- untranslated -->
+    <string name="item_copper_ore_name">Мідна Руда</string>
     <string name="item_copper_ore_desc">Common ore. Combine with tin ore to smelt bronze bars.</string> <!-- untranslated -->
     <string name="item_tin_ore_name">Tin Ore</string> <!-- untranslated -->
     <string name="item_tin_ore_desc">Common ore. Combine with copper ore to smelt bronze bars.</string> <!-- untranslated -->
-    <string name="item_iron_ore_name">Iron Ore</string> <!-- untranslated -->
+    <string name="item_iron_ore_name">Залізна Руда</string>
     <string name="item_iron_ore_desc">Versatile ore used to smelt iron and steel bars.</string> <!-- untranslated -->
     <string name="item_coal_name">Coal</string> <!-- untranslated -->
     <string name="item_coal_desc">Used as a fuel component when smelting steel and higher-tier bars.</string> <!-- untranslated -->
-    <string name="item_silver_ore_name">Silver Ore</string> <!-- untranslated -->
+    <string name="item_silver_ore_name">Срібна Руда</string>
     <string name="item_silver_ore_desc">Precious ore used to craft silver bars and jewellery.</string> <!-- untranslated -->
-    <string name="item_gold_ore_name">Gold Ore</string> <!-- untranslated -->
-    <string name="item_gold_ore_desc">Precious ore used to craft gold bars and jewellery.</string> <!-- untranslated -->
+    <string name="item_gold_ore_name">Золота Руда</string>
+    <string name="item_gold_ore_desc">Дорогоцінна руда, що використовується для виготовлення золотих злитків та коштовностей.</string>
     <string name="item_mithril_ore_name">Mithril Ore</string> <!-- untranslated -->
     <string name="item_mithril_ore_desc">A rare ore with magical properties.</string> <!-- untranslated -->
     <string name="item_adamantite_ore_name">Adamantite Ore</string> <!-- untranslated -->
     <string name="item_adamantite_ore_desc">Extremely hard and very rare ore.</string> <!-- untranslated -->
-    <string name="item_platinum_ore_name">Platinum Ore</string> <!-- untranslated -->
+    <string name="item_platinum_ore_name">Плантинова Руда</string>
     <string name="item_platinum_ore_desc">A rare platinum ore used for platinum bars.</string> <!-- untranslated -->
     <string name="item_runite_ore_name">Runite Ore</string> <!-- untranslated -->
     <string name="item_runite_ore_desc">The rarest mineable ore, used for the strongest equipment.</string> <!-- untranslated -->
@@ -25,33 +25,33 @@
     <string name="item_rune_essence_desc">Raw magical stone used to craft all types of runes.</string> <!-- untranslated -->
 
     <!-- ===== Metal bars ===== -->
-    <string name="item_bronze_bar_name">Bronze Bar</string> <!-- untranslated -->
+    <string name="item_bronze_bar_name">Бронзовий Злиток</string>
     <string name="item_bronze_bar_desc">Smelted from copper ore and tin ore. The most basic metal bar.</string> <!-- untranslated -->
-    <string name="item_iron_bar_name">Iron Bar</string> <!-- untranslated -->
+    <string name="item_iron_bar_name">Залізний Злиток</string>
     <string name="item_iron_bar_desc">A sturdy iron bar used for crafting iron equipment.</string> <!-- untranslated -->
-    <string name="item_silver_bar_name">Silver Bar</string> <!-- untranslated -->
+    <string name="item_silver_bar_name">Срібний Злиток</string>
     <string name="item_silver_bar_desc">Refined silver bar used for crafting jewellery.</string> <!-- untranslated -->
-    <string name="item_steel_bar_name">Steel Bar</string> <!-- untranslated -->
+    <string name="item_steel_bar_name">Сталевий Злиток</string>
     <string name="item_steel_bar_desc">Stronger than iron. Used for crafting steel equipment.</string> <!-- untranslated -->
-    <string name="item_gold_bar_name">Gold Bar</string> <!-- untranslated -->
+    <string name="item_gold_bar_name">Золотий Злиток</string>
     <string name="item_gold_bar_desc">Refined gold bar used for crafting jewellery and gold equipment.</string> <!-- untranslated -->
     <string name="item_mithril_bar_name">Mithril Bar</string> <!-- untranslated -->
     <string name="item_mithril_bar_desc">A lightweight magical metal bar.</string> <!-- untranslated -->
     <string name="item_adamantite_bar_name">Adamantite Bar</string> <!-- untranslated -->
     <string name="item_adamantite_bar_desc">An extraordinarily hard metal bar.</string> <!-- untranslated -->
-    <string name="item_platinum_bar_name">Platinum Bar</string> <!-- untranslated -->
+    <string name="item_platinum_bar_name">Платиновий Злиток</string>
     <string name="item_platinum_bar_desc">A rare and lustrous platinum bar for high-tier jewellery.</string> <!-- untranslated -->
     <string name="item_runite_bar_name">Runite Bar</string> <!-- untranslated -->
     <string name="item_runite_bar_desc">The strongest smeltable metal bar.</string> <!-- untranslated -->
 
     <!-- ===== Gems ===== -->
-    <string name="item_sapphire_name">Sapphire</string> <!-- untranslated -->
+    <string name="item_sapphire_name">Сапфір</string>
     <string name="item_sapphire_desc">A blue gemstone used in jewellery crafting.</string> <!-- untranslated -->
     <string name="item_emerald_name">Emerald</string> <!-- untranslated -->
     <string name="item_emerald_desc">A green gemstone of moderate rarity.</string> <!-- untranslated -->
-    <string name="item_ruby_name">Ruby</string> <!-- untranslated -->
+    <string name="item_ruby_name">Рубін</string>
     <string name="item_ruby_desc">A red gemstone. Rare and valuable.</string> <!-- untranslated -->
-    <string name="item_diamond_name">Diamond</string> <!-- untranslated -->
+    <string name="item_diamond_name">Діамант</string>
     <string name="item_diamond_desc">The rarest and most valuable gemstone.</string> <!-- untranslated -->
 
     <!-- ===== Logs ===== -->
@@ -149,39 +149,39 @@
     <string name="item_cooked_beef_desc">Cooked beef. Restores HP when eaten.</string> <!-- untranslated -->
 
     <!-- ===== Melee weapons — bronze ===== -->
-    <string name="item_bronze_sword_name">Bronze Sword</string> <!-- untranslated -->
+    <string name="item_bronze_sword_name">Бронзовий меч</string>
     <string name="item_bronze_sword_desc">A basic one-handed bronze blade.</string> <!-- untranslated -->
     <string name="item_bronze_scimitar_name">Bronze Scimitar</string> <!-- untranslated -->
     <string name="item_bronze_scimitar_desc">A curved one-handed bronze blade with good strength bonus.</string> <!-- untranslated -->
-    <string name="item_bronze_2h_sword_name">Bronze 2H Sword</string> <!-- untranslated -->
+    <string name="item_bronze_2h_sword_name">Бронзовий Двуручний Меч</string>
     <string name="item_bronze_2h_sword_desc">A two-handed bronze sword. High damage, slow speed.</string> <!-- untranslated -->
     <string name="item_bronze_warhammer_name">Bronze Warhammer</string> <!-- untranslated -->
     <string name="item_bronze_warhammer_desc">A heavy one-handed bronze hammer.</string> <!-- untranslated -->
     <string name="item_bronze_battleaxe_name">Bronze Battleaxe</string> <!-- untranslated -->
     <string name="item_bronze_battleaxe_desc">A fearsome one-handed bronze axe.</string> <!-- untranslated -->
-    <string name="item_bronze_dagger_name">Bronze Dagger</string> <!-- untranslated -->
+    <string name="item_bronze_dagger_name">Бронзовий Кинджал</string>
     <string name="item_bronze_dagger_desc">A quick and lightweight bronze dagger.</string> <!-- untranslated -->
 
     <!-- Melee weapons — iron -->
-    <string name="item_iron_sword_name">Iron Sword</string> <!-- untranslated -->
+    <string name="item_iron_sword_name">Залізний Меч</string>
     <string name="item_iron_sword_desc">A one-handed iron blade.</string> <!-- untranslated -->
     <string name="item_iron_scimitar_name">Iron Scimitar</string> <!-- untranslated -->
     <string name="item_iron_scimitar_desc">A curved one-handed iron blade with good strength bonus.</string> <!-- untranslated -->
-    <string name="item_iron_2h_sword_name">Iron 2H Sword</string> <!-- untranslated -->
+    <string name="item_iron_2h_sword_name">Залізний Двуручний Меч</string>
     <string name="item_iron_2h_sword_desc">A two-handed iron sword.</string> <!-- untranslated -->
     <string name="item_iron_warhammer_name">Iron Warhammer</string> <!-- untranslated -->
     <string name="item_iron_warhammer_desc">A heavy one-handed iron hammer.</string> <!-- untranslated -->
     <string name="item_iron_battleaxe_name">Iron Battleaxe</string> <!-- untranslated -->
     <string name="item_iron_battleaxe_desc">A fearsome one-handed iron axe.</string> <!-- untranslated -->
-    <string name="item_iron_dagger_name">Iron Dagger</string> <!-- untranslated -->
+    <string name="item_iron_dagger_name">Залізний Кинджал</string>
     <string name="item_iron_dagger_desc">A quick and lightweight iron dagger.</string> <!-- untranslated -->
 
     <!-- Melee weapons — steel -->
-    <string name="item_steel_sword_name">Steel Sword</string> <!-- untranslated -->
+    <string name="item_steel_sword_name">Стальний Меч</string>
     <string name="item_steel_sword_desc">A one-handed steel blade.</string> <!-- untranslated -->
     <string name="item_steel_scimitar_name">Steel Scimitar</string> <!-- untranslated -->
     <string name="item_steel_scimitar_desc">A curved one-handed steel blade with good strength bonus.</string> <!-- untranslated -->
-    <string name="item_steel_2h_sword_name">Steel 2H Sword</string> <!-- untranslated -->
+    <string name="item_steel_2h_sword_name">Стальний Двуручний Меч</string>
     <string name="item_steel_2h_sword_desc">A two-handed steel sword.</string> <!-- untranslated -->
     <string name="item_steel_warhammer_name">Steel Warhammer</string> <!-- untranslated -->
     <string name="item_steel_warhammer_desc">A heavy one-handed steel hammer.</string> <!-- untranslated -->
@@ -225,61 +225,61 @@
     <string name="item_runite_battleaxe_desc">The finest battleaxe available.</string> <!-- untranslated -->
 
     <!-- ===== Ranged weapons ===== -->
-    <string name="item_wooden_bow_name">Wooden Bow</string> <!-- untranslated -->
+    <string name="item_wooden_bow_name">Дерев\'яний Лук</string>
     <string name="item_wooden_bow_desc">A simple wooden bow. Good for training Ranged.</string> <!-- untranslated -->
     <string name="item_oak_bow_name">Oak Bow</string> <!-- untranslated -->
     <string name="item_oak_bow_desc">A reliable bow crafted from oak wood.</string> <!-- untranslated -->
 
     <!-- ===== Magic weapons ===== -->
-    <string name="item_basic_staff_name">Basic Staff</string> <!-- untranslated -->
+    <string name="item_basic_staff_name">Простий Посох</string>
     <string name="item_basic_staff_desc">A simple magical staff for apprentice mages.</string> <!-- untranslated -->
-    <string name="item_apprentice_staff_name">Apprentice Staff</string> <!-- untranslated -->
+    <string name="item_apprentice_staff_name">Посох Учня</string>
     <string name="item_apprentice_staff_desc">An improved staff for developing mages.</string> <!-- untranslated -->
-    <string name="item_staff_of_air_name">Staff of Air</string> <!-- untranslated -->
+    <string name="item_staff_of_air_name">Посох Повітря</string>
     <string name="item_staff_of_air_desc">An elemental staff imbued with the power of air.</string> <!-- untranslated -->
-    <string name="item_staff_of_water_name">Staff of Water</string> <!-- untranslated -->
+    <string name="item_staff_of_water_name">Посох Води</string>
     <string name="item_staff_of_water_desc">An elemental staff imbued with the power of water.</string> <!-- untranslated -->
-    <string name="item_staff_of_earth_name">Staff of Earth</string> <!-- untranslated -->
+    <string name="item_staff_of_earth_name">Посох Землі</string>
     <string name="item_staff_of_earth_desc">An elemental staff imbued with the power of earth.</string> <!-- untranslated -->
-    <string name="item_staff_of_fire_name">Staff of Fire</string> <!-- untranslated -->
+    <string name="item_staff_of_fire_name">Посох Вогню</string>
     <string name="item_staff_of_fire_desc">An elemental staff imbued with the power of fire.</string> <!-- untranslated -->
-    <string name="item_staff_of_mind_name">Staff of Mind</string> <!-- untranslated -->
+    <string name="item_staff_of_mind_name">Посох Розуму</string>
     <string name="item_staff_of_mind_desc">A staff imbued with psychic energy.</string> <!-- untranslated -->
-    <string name="item_staff_of_chaos_name">Staff of Chaos</string> <!-- untranslated -->
+    <string name="item_staff_of_chaos_name">Посох Хаосу</string>
     <string name="item_staff_of_chaos_desc">A chaotic staff pulsing with wild magical energy.</string> <!-- untranslated -->
-    <string name="item_staff_of_death_name">Staff of Death</string> <!-- untranslated -->
+    <string name="item_staff_of_death_name">Посох Смерті</string>
     <string name="item_staff_of_death_desc">A dark staff wreathed in the power of death.</string> <!-- untranslated -->
-    <string name="item_staff_of_blood_name">Staff of Blood</string> <!-- untranslated -->
+    <string name="item_staff_of_blood_name">Посох Крові</string>
     <string name="item_staff_of_blood_desc">A powerful staff fuelled by blood magic.</string> <!-- untranslated -->
 
     <!-- ===== Armour — bronze ===== -->
-    <string name="item_bronze_helmet_name">Bronze Helmet</string> <!-- untranslated -->
+    <string name="item_bronze_helmet_name">Бронзовий Шлем</string>
     <string name="item_bronze_helmet_desc">Basic bronze head protection.</string> <!-- untranslated -->
     <string name="item_bronze_platebody_name">Bronze Platebody</string> <!-- untranslated -->
     <string name="item_bronze_platebody_desc">Basic bronze body armour.</string> <!-- untranslated -->
     <string name="item_bronze_platelegs_name">Bronze Platelegs</string> <!-- untranslated -->
     <string name="item_bronze_platelegs_desc">Basic bronze leg protection.</string> <!-- untranslated -->
-    <string name="item_bronze_shield_name">Bronze Shield</string> <!-- untranslated -->
+    <string name="item_bronze_shield_name">Бронзовий Щит</string>
     <string name="item_bronze_shield_desc">A basic bronze shield.</string> <!-- untranslated -->
 
     <!-- Armour — iron -->
-    <string name="item_iron_helmet_name">Iron Helmet</string> <!-- untranslated -->
+    <string name="item_iron_helmet_name">Залізний Шлем</string>
     <string name="item_iron_helmet_desc">Iron head protection.</string> <!-- untranslated -->
     <string name="item_iron_platebody_name">Iron Platebody</string> <!-- untranslated -->
     <string name="item_iron_platebody_desc">Iron body armour.</string> <!-- untranslated -->
     <string name="item_iron_platelegs_name">Iron Platelegs</string> <!-- untranslated -->
     <string name="item_iron_platelegs_desc">Iron leg protection.</string> <!-- untranslated -->
-    <string name="item_iron_shield_name">Iron Shield</string> <!-- untranslated -->
+    <string name="item_iron_shield_name">Залізний Щит</string>
     <string name="item_iron_shield_desc">An iron shield.</string> <!-- untranslated -->
 
     <!-- Armour — steel -->
-    <string name="item_steel_helmet_name">Steel Helmet</string> <!-- untranslated -->
+    <string name="item_steel_helmet_name">Сталевий Шлем</string>
     <string name="item_steel_helmet_desc">Sturdy steel head protection.</string> <!-- untranslated -->
     <string name="item_steel_platebody_name">Steel Platebody</string> <!-- untranslated -->
     <string name="item_steel_platebody_desc">Sturdy steel body armour.</string> <!-- untranslated -->
     <string name="item_steel_platelegs_name">Steel Platelegs</string> <!-- untranslated -->
     <string name="item_steel_platelegs_desc">Sturdy steel leg protection.</string> <!-- untranslated -->
-    <string name="item_steel_shield_name">Steel Shield</string> <!-- untranslated -->
+    <string name="item_steel_shield_name">Сталевий Щит</string>
     <string name="item_steel_shield_desc">A sturdy steel shield.</string> <!-- untranslated -->
 
     <!-- Armour — mithril -->
@@ -325,11 +325,11 @@
     <string name="item_slayer_plateskirt_desc">Protective skirt crafted for extended dungeon runs.</string> <!-- untranslated -->
 
     <!-- ===== Tools — pickaxes ===== -->
-    <string name="item_bronze_pickaxe_name">Bronze Pickaxe</string> <!-- untranslated -->
+    <string name="item_bronze_pickaxe_name">Бронзова Кирка</string>
     <string name="item_bronze_pickaxe_desc">A basic pickaxe for Mining.</string> <!-- untranslated -->
-    <string name="item_iron_pickaxe_name">Iron Pickaxe</string> <!-- untranslated -->
+    <string name="item_iron_pickaxe_name">Залізна Кирка</string>
     <string name="item_iron_pickaxe_desc">A reliable pickaxe for Mining.</string> <!-- untranslated -->
-    <string name="item_steel_pickaxe_name">Steel Pickaxe</string> <!-- untranslated -->
+    <string name="item_steel_pickaxe_name">Сталева Кирка</string>
     <string name="item_steel_pickaxe_desc">A sturdy pickaxe for Mining.</string> <!-- untranslated -->
     <string name="item_mithril_pickaxe_name">Mithril Pickaxe</string> <!-- untranslated -->
     <string name="item_mithril_pickaxe_desc">A lightweight magical pickaxe for Mining.</string> <!-- untranslated -->
@@ -341,11 +341,11 @@
     <string name="item_divine_pickaxe_desc">A pickaxe touched by divine light. Stone parts before it like water.</string> <!-- untranslated -->
 
     <!-- Tools — axes -->
-    <string name="item_bronze_axe_name">Bronze Axe</string> <!-- untranslated -->
+    <string name="item_bronze_axe_name">Бронзова Сокира</string>
     <string name="item_bronze_axe_desc">A basic axe for Woodcutting.</string> <!-- untranslated -->
-    <string name="item_iron_axe_name">Iron Axe</string> <!-- untranslated -->
+    <string name="item_iron_axe_name">Залізна Сокира</string>
     <string name="item_iron_axe_desc">A reliable axe for Woodcutting.</string> <!-- untranslated -->
-    <string name="item_steel_axe_name">Steel Axe</string> <!-- untranslated -->
+    <string name="item_steel_axe_name">Сталева Сокира</string>
     <string name="item_steel_axe_desc">A sturdy axe for Woodcutting.</string> <!-- untranslated -->
     <string name="item_mithril_axe_name">Mithril Axe</string> <!-- untranslated -->
     <string name="item_mithril_axe_desc">A lightweight magical axe for Woodcutting.</string> <!-- untranslated -->
@@ -373,11 +373,11 @@
     <string name="item_divine_fishing_rod_desc">A rod blessed by the sea gods. Fish practically leap onto it.</string> <!-- untranslated -->
 
     <!-- ===== Arrows ===== -->
-    <string name="item_bronze_arrow_name">Bronze Arrows</string> <!-- untranslated -->
+    <string name="item_bronze_arrow_name">Бронзові стріли</string>
     <string name="item_bronze_arrow_desc">Basic arrows for ranged combat.</string> <!-- untranslated -->
-    <string name="item_iron_arrow_name">Iron Arrows</string> <!-- untranslated -->
+    <string name="item_iron_arrow_name">Залізні стріли</string>
     <string name="item_iron_arrow_desc">Iron arrows for ranged combat.</string> <!-- untranslated -->
-    <string name="item_steel_arrow_name">Steel Arrows</string> <!-- untranslated -->
+    <string name="item_steel_arrow_name">Сталеві стріли</string>
     <string name="item_steel_arrow_desc">Steel arrows for ranged combat.</string> <!-- untranslated -->
     <string name="item_mithril_arrow_name">Mithril Arrows</string> <!-- untranslated -->
     <string name="item_mithril_arrow_desc">Mithril arrows for ranged combat.</string> <!-- untranslated -->
@@ -403,15 +403,15 @@
     <string name="item_runite_arrow_tips_desc">Runite tips for fletching runite arrows.</string> <!-- untranslated -->
 
     <!-- ===== Jewellery — plain ===== -->
-    <string name="item_silver_ring_name">Silver Ring</string> <!-- untranslated -->
+    <string name="item_silver_ring_name">Срібне Кільце</string>
     <string name="item_silver_ring_desc">A plain silver ring.</string> <!-- untranslated -->
     <string name="item_silver_necklace_name">Silver Necklace</string> <!-- untranslated -->
     <string name="item_silver_necklace_desc">A plain silver necklace.</string> <!-- untranslated -->
-    <string name="item_gold_ring_name">Gold Ring</string> <!-- untranslated -->
+    <string name="item_gold_ring_name">Золоте Кільце</string>
     <string name="item_gold_ring_desc">A plain gold ring.</string> <!-- untranslated -->
     <string name="item_gold_necklace_name">Gold Necklace</string> <!-- untranslated -->
     <string name="item_gold_necklace_desc">A plain gold necklace.</string> <!-- untranslated -->
-    <string name="item_platinum_ring_name">Platinum Ring</string> <!-- untranslated -->
+    <string name="item_platinum_ring_name">Платинове Кільце</string>
     <string name="item_platinum_ring_desc">A plain platinum ring.</string> <!-- untranslated -->
     <string name="item_platinum_necklace_name">Platinum Necklace</string> <!-- untranslated -->
     <string name="item_platinum_necklace_desc">A plain platinum necklace.</string> <!-- untranslated -->
@@ -465,24 +465,24 @@
     <string name="item_shadow_signet_desc">A ring bearing the seal of the Guild of Shadows. Only the guild\'s most dangerous operatives ever wore one.</string> <!-- untranslated -->
 
     <!-- Junk items -->
-    <string name="item_bread_name">Bread</string> <!-- untranslated -->
-    <string name="item_leather_name">Leather</string> <!-- untranslated -->
+    <string name="item_bread_name">Хліб</string>
+    <string name="item_leather_name">Шкіра</string>
     <string name="item_flour_name">Flour</string> <!-- untranslated -->
     <string name="item_cooked_trout_name">Cooked Trout</string> <!-- untranslated -->
     <string name="item_thread_name">Thread</string> <!-- untranslated -->
-    <string name="item_ruby_ring_name">Ruby Ring</string> <!-- untranslated -->
+    <string name="item_ruby_ring_name">Рубінове Кільце</string>
     <string name="item_diamond_ring_name">Diamond Ring</string> <!-- untranslated -->
     <string name="item_diamond_necklace_name">Diamond Necklace</string> <!-- untranslated -->
     <string name="item_ancient_treasure_name">Ancient Treasure</string> <!-- untranslated -->
     <string name="item_seaweed_name">Seaweed</string> <!-- untranslated -->
     <string name="item_old_boot_name">Old Boot</string> <!-- untranslated -->
-    <string name="item_pearl_name">Pearl</string> <!-- untranslated -->
-    <string name="item_black_pearl_name">Black Pearl</string> <!-- untranslated -->
+    <string name="item_pearl_name">Перлина</string>
+    <string name="item_black_pearl_name">Чорна Перлина</string>
     <string name="item_nature_rune_name">Nature Rune</string> <!-- untranslated -->
     <string name="item_herb_name">Herb</string> <!-- untranslated -->
     <string name="item_mahogany_log_name">Mahogany Log</string> <!-- untranslated -->
     <string name="item_oyster_name">Oyster</string> <!-- untranslated -->
-    <string name="item_crab_name">Crab</string> <!-- untranslated -->
+    <string name="item_crab_name">Краб</string>
     <string name="item_bird_nest_name">Bird Nest</string> <!-- untranslated -->
     <string name="item_tree_seed_name">Tree Seed</string> <!-- untranslated -->
     <string name="item_teak_log_name">Teak Log</string> <!-- untranslated -->
@@ -502,23 +502,23 @@
     <string name="item_magic_ashes_desc">Burnt remnants of magic logs. Scatter for substantial Prayer XP.</string> <!-- untranslated -->
     <string name="item_redwood_ashes_name">Redwood Ashes</string> <!-- untranslated -->
     <string name="item_redwood_ashes_desc">Burnt remnants of redwood logs. Scatter for the most Prayer XP of any ash.</string> <!-- untranslated -->
-    <string name="item_bones_name">Bones</string> <!-- untranslated -->
+    <string name="item_bones_name">Кістки</string>
     <string name="item_bones_desc">Bones from a small creature. Bury for Prayer XP.</string> <!-- untranslated -->
-    <string name="item_big_bones_name">Big Bones</string> <!-- untranslated -->
+    <string name="item_big_bones_name">Великі Кістки</string>
     <string name="item_big_bones_desc">Larger bones. Grant more Prayer XP when buried.</string> <!-- untranslated -->
-    <string name="item_giant_bones_name">Giant Bones</string> <!-- untranslated -->
+    <string name="item_giant_bones_name">Гігантські Кістки</string>
     <string name="item_giant_bones_desc">Massive bones from powerful foes. Grant significant Prayer XP.</string> <!-- untranslated -->
-    <string name="item_dragon_bone_name">Dragon Bone</string> <!-- untranslated -->
+    <string name="item_dragon_bone_name">Кістки Дракона</string>
     <string name="item_dragon_bone_desc">Ancient dragon bones. Grant the most Prayer XP when buried.</string> <!-- untranslated -->
     <string name="item_dragon_scale_name">Dragon Scale</string> <!-- untranslated -->
     <string name="item_dragon_scale_desc">A tough scale from a green dragon. Rare and valuable.</string> <!-- untranslated -->
-    <string name="item_coins_name">Coins</string> <!-- untranslated -->
+    <string name="item_coins_name">Монети</string>
     <string name="item_coins_desc">The currency of the realm. Spend at the shop.</string> <!-- untranslated -->
     <string name="item_goblin_mail_name">Goblin Mail</string> <!-- untranslated -->
     <string name="item_goblin_mail_desc">Battered armour dropped by goblins. Sells well.</string> <!-- untranslated -->
     <string name="item_imp_hide_name">Imp Hide</string> <!-- untranslated -->
     <string name="item_imp_hide_desc">Leathery skin from an imp.</string> <!-- untranslated -->
-    <string name="item_spider_silk_name">Spider Silk</string> <!-- untranslated -->
+    <string name="item_spider_silk_name">Шовк Павуків</string>
     <string name="item_spider_silk_desc">Fine silk spun by giant spiders. Valuable to crafters.</string> <!-- untranslated -->
     <string name="item_spider_fang_name">Spider Fang</string> <!-- untranslated -->
     <string name="item_spider_fang_desc">A venomous fang from a giant spider.</string> <!-- untranslated -->
@@ -536,39 +536,39 @@
     <string name="item_magic_bean_desc">A magical bean with mysterious properties.</string> <!-- untranslated -->
     <string name="item_hellhound_fang_name">Hellhound Fang</string> <!-- untranslated -->
     <string name="item_hellhound_fang_desc">A scorched fang from a hellhound.</string> <!-- untranslated -->
-    <string name="item_demon_horn_name">Demon Horn</string> <!-- untranslated -->
+    <string name="item_demon_horn_name">Ріг Демона</string>
     <string name="item_demon_horn_desc">A jagged horn torn from a lesser demon.</string> <!-- untranslated -->
-    <string name="item_troll_bone_name">Troll Bone</string> <!-- untranslated -->
+    <string name="item_troll_bone_name">Кістка Троля</string>
     <string name="item_troll_bone_desc">A huge, gnarled bone from a mountain troll.</string> <!-- untranslated -->
 
     <!-- ===== Runes ===== -->
-    <string name="item_air_rune_name">Air Rune</string> <!-- untranslated -->
+    <string name="item_air_rune_name">Руна Повітря</string>
     <string name="item_air_rune_desc">A rune imbued with the power of air. Used in air spells.</string> <!-- untranslated -->
-    <string name="item_water_rune_name">Water Rune</string> <!-- untranslated -->
+    <string name="item_water_rune_name">Руна Води</string>
     <string name="item_water_rune_desc">A rune imbued with the power of water.</string> <!-- untranslated -->
-    <string name="item_earth_rune_name">Earth Rune</string> <!-- untranslated -->
+    <string name="item_earth_rune_name">Руна Землі</string>
     <string name="item_earth_rune_desc">A rune imbued with the power of earth.</string> <!-- untranslated -->
-    <string name="item_fire_rune_name">Fire Rune</string> <!-- untranslated -->
+    <string name="item_fire_rune_name">Руна Вогню</string>
     <string name="item_fire_rune_desc">A rune imbued with the power of fire.</string> <!-- untranslated -->
-    <string name="item_mind_rune_name">Mind Rune</string> <!-- untranslated -->
+    <string name="item_mind_rune_name">Руна Розуму</string>
     <string name="item_mind_rune_desc">A rune channelling psychic energy.</string> <!-- untranslated -->
-    <string name="item_chaos_rune_name">Chaos Rune</string> <!-- untranslated -->
+    <string name="item_chaos_rune_name">Руна Хаосу</string>
     <string name="item_chaos_rune_desc">A rune of wild, chaotic magic.</string> <!-- untranslated -->
-    <string name="item_death_rune_name">Death Rune</string> <!-- untranslated -->
+    <string name="item_death_rune_name">Руна Смерті</string>
     <string name="item_death_rune_desc">A rune infused with the power of death.</string> <!-- untranslated -->
-    <string name="item_blood_rune_name">Blood Rune</string> <!-- untranslated -->
+    <string name="item_blood_rune_name">Руна Крові</string>
     <string name="item_blood_rune_desc">A rare rune fuelled by blood magic.</string> <!-- untranslated -->
 
     <!-- ===== Crops ===== -->
-    <string name="crop_potato_name">Potato</string> <!-- untranslated -->
-    <string name="crop_onion_name">Onion</string> <!-- untranslated -->
+    <string name="crop_potato_name">Картопля</string>
+    <string name="crop_onion_name">Цибуля</string>
     <string name="crop_cabbage_name">Cabbage</string> <!-- untranslated -->
-    <string name="crop_carrot_name">Carrot</string> <!-- untranslated -->
-    <string name="crop_tomato_name">Tomato</string> <!-- untranslated -->
-    <string name="crop_corn_name">Corn</string> <!-- untranslated -->
-    <string name="crop_pumpkin_name">Pumpkin</string> <!-- untranslated -->
-    <string name="crop_watermelon_name">Watermelon</string> <!-- untranslated -->
-    <string name="crop_strawberry_name">Strawberry</string> <!-- untranslated -->
+    <string name="crop_carrot_name">Морква</string>
+    <string name="crop_tomato_name">Томат</string>
+    <string name="crop_corn_name">Кукурудза</string>
+    <string name="crop_pumpkin_name">Гарбуз</string>
+    <string name="crop_watermelon_name">Кавун</string>
+    <string name="crop_strawberry_name">Полуниця</string>
     <string name="crop_magic_herb_name">Magic Herb</string> <!-- untranslated -->
     <string name="crop_dragon_fruit_name">Dragon Fruit</string> <!-- untranslated -->
     <string name="crop_golden_wheat_name">Golden Wheat</string> <!-- untranslated -->
@@ -631,9 +631,9 @@
     <string name="item_runite_lockpick_name">Runite Lockpick</string> <!-- untranslated -->
 
     <!-- ===== Smithing hammers ===== -->
-    <string name="item_bronze_hammer_name">Bronze Hammer</string> <!-- untranslated -->
-    <string name="item_iron_hammer_name">Iron Hammer</string> <!-- untranslated -->
-    <string name="item_steel_hammer_name">Steel Hammer</string> <!-- untranslated -->
+    <string name="item_bronze_hammer_name">Бронзовий Молот</string>
+    <string name="item_iron_hammer_name">Залізний Молот</string>
+    <string name="item_steel_hammer_name">Сталевий Молот</string>
     <string name="item_mithril_hammer_name">Mithril Hammer</string> <!-- untranslated -->
     <string name="item_adamantite_hammer_name">Adamantite Hammer</string> <!-- untranslated -->
     <string name="item_runite_hammer_name">Runite Hammer</string> <!-- untranslated -->
@@ -673,14 +673,14 @@
     <!-- Herblore potions -->
     <string name="item_attack_brew_name">Attack Brew</string> <!-- untranslated -->
     <string name="item_defense_brew_name">Defense Brew</string> <!-- untranslated -->
-    <string name="item_attack_potion_name">Attack Potion</string> <!-- untranslated -->
-    <string name="item_defense_potion_name">Defense Potion</string> <!-- untranslated -->
+    <string name="item_attack_potion_name">Зілля Атаки</string>
+    <string name="item_defense_potion_name">Зілля Захисту</string>
     <string name="item_onion_brew_name">Onion Brew</string> <!-- untranslated -->
     <string name="item_carrot_brew_name">Carrot Brew</string> <!-- untranslated -->
     <string name="item_strength_brew_name">Strength Brew</string> <!-- untranslated -->
-    <string name="item_strength_potion_name">Strength Potion</string> <!-- untranslated -->
+    <string name="item_strength_potion_name">Зілля Сили</string>
     <string name="item_ranging_potion_name">Ranging Potion</string> <!-- untranslated -->
-    <string name="item_magic_potion_name">Magic Potion</string> <!-- untranslated -->
+    <string name="item_magic_potion_name">Зілля Магії</string>
     <string name="item_super_strength_potion_name">Super Strength Potion</string> <!-- untranslated -->
     <string name="item_super_attack_potion_name">Super Attack Potion</string> <!-- untranslated -->
     <string name="item_super_defense_potion_name">Super Defense Potion</string> <!-- untranslated -->
@@ -709,7 +709,7 @@
     <string name="item_any_fish_name">fish (any type)</string> <!-- untranslated -->
 
     <!-- Construction item names (planks, nails, stone) -->
-    <string name="item_plank_name">Plank</string> <!-- untranslated -->
+    <string name="item_plank_name">Дошка</string>
     <string name="item_oak_plank_name">Oak Plank</string> <!-- untranslated -->
     <string name="item_willow_plank_name">Willow Plank</string> <!-- untranslated -->
     <string name="item_maple_plank_name">Maple Plank</string> <!-- untranslated -->
@@ -720,7 +720,7 @@
     <string name="item_steel_nail_name">Steel Nail</string> <!-- untranslated -->
     <string name="item_mithril_nail_name">Mithril Nail</string> <!-- untranslated -->
     <string name="item_runite_nail_name">Runite Nail</string> <!-- untranslated -->
-    <string name="item_stone_name">Stone</string> <!-- untranslated -->
+    <string name="item_stone_name">Камінь</string>
     <string name="item_stone_desc">A block of stone. Used for construction.</string> <!-- untranslated -->
     <string name="item_carved_stone_name">Carved Stone</string> <!-- untranslated -->
     <string name="item_stone_block_name">Stone Block</string> <!-- untranslated -->
@@ -733,30 +733,30 @@
     <string name="item_willow_cabinet_name">Willow Cabinet</string> <!-- untranslated -->
     <string name="item_maple_dresser_name">Maple Dresser</string> <!-- untranslated -->
     <string name="item_yew_wardrobe_name">Yew Wardrobe</string> <!-- untranslated -->
-    <string name="item_magic_throne_name">Magic Throne</string> <!-- untranslated -->
+    <string name="item_magic_throne_name">Магічний Трон</string>
     <string name="item_redwood_bench_name">Redwood Bench</string> <!-- untranslated -->
     <string name="item_redwood_bookcase_name">Redwood Bookcase</string> <!-- untranslated -->
     <string name="item_redwood_grand_bed_name">Redwood Grand Bed</string> <!-- untranslated -->
 
 
     <!-- ===== Seed names ===== -->
-    <string name="item_potato_seed_name">Potato Seed</string> <!-- untranslated -->
+    <string name="item_potato_seed_name">Зернятко Картоплі</string>
     <string name="item_potato_seed_desc">Plant to grow potatoes. Grows in 2h.\nRequires farming level 1.</string> <!-- untranslated -->
-    <string name="item_onion_seed_name">Onion Seed</string> <!-- untranslated -->
+    <string name="item_onion_seed_name">Зернятко Цибулі</string>
     <string name="item_onion_seed_desc">Plant to grow onions. Grows in 3h.\nRequires farming level 5.</string> <!-- untranslated -->
     <string name="item_cabbage_seed_name">Cabbage Seed</string> <!-- untranslated -->
     <string name="item_cabbage_seed_desc">Plant to grow cabbage. Grows in 4h.\nRequires farming level 10.</string> <!-- untranslated -->
-    <string name="item_carrot_seed_name">Carrot Seed</string> <!-- untranslated -->
+    <string name="item_carrot_seed_name">Зернятко Моркви</string>
     <string name="item_carrot_seed_desc">Plant to grow carrots. Grows in 5h.\nRequires farming level 15.</string> <!-- untranslated -->
-    <string name="item_tomato_seed_name">Tomato Seed</string> <!-- untranslated -->
+    <string name="item_tomato_seed_name">Зернятко Томату</string>
     <string name="item_tomato_seed_desc">Plant to grow tomatoes. Grows in 6h.\nRequires farming level 20.</string> <!-- untranslated -->
-    <string name="item_corn_seed_name">Corn Seed</string> <!-- untranslated -->
+    <string name="item_corn_seed_name">Зернятко Кукурудзи</string>
     <string name="item_corn_seed_desc">Plant to grow corn. Grows in 7h.\nRequires farming level 25.</string> <!-- untranslated -->
-    <string name="item_pumpkin_seed_name">Pumpkin Seed</string> <!-- untranslated -->
+    <string name="item_pumpkin_seed_name">Зернятко Гарбуза</string>
     <string name="item_pumpkin_seed_desc">Plant to grow pumpkins. Grows in 9h.\nRequires farming level 30.</string> <!-- untranslated -->
-    <string name="item_watermelon_seed_name">Watermelon Seed</string> <!-- untranslated -->
+    <string name="item_watermelon_seed_name">Зернятко Кавуна</string>
     <string name="item_watermelon_seed_desc">Plant to grow watermelons. Grows in 10h.\nRequires farming level 35.</string> <!-- untranslated -->
-    <string name="item_strawberry_seed_name">Strawberry Seed</string> <!-- untranslated -->
+    <string name="item_strawberry_seed_name">Зернятко Полуниці</string>
     <string name="item_strawberry_seed_desc">Plant to grow strawberries. Grows in 11h.\nRequires farming level 40.</string> <!-- untranslated -->
     <string name="item_magic_herb_seed_name">Magic Herb Seed</string> <!-- untranslated -->
     <string name="item_magic_herb_seed_desc">Plant to grow magic herbs. Grows in 13h.\nRequires farming level 50.</string> <!-- untranslated -->
@@ -790,21 +790,21 @@
     <string name="item_agility_guild_cape_name">Agility Guild Cape</string> <!-- untranslated -->
     <string name="item_amulet_of_fury_name">Amulet Of Fury</string> <!-- untranslated -->
     <string name="item_amulet_of_fury_desc">A powerful amulet granting bonuses to all combat styles. Requires Mercantile level 80 to purchase.</string> <!-- untranslated -->
-    <string name="item_amulet_of_strength_name">Amulet Of Strength</string> <!-- untranslated -->
+    <string name="item_amulet_of_strength_name">Амулет Сили</string>
     <string name="item_amulet_of_strength_desc">Increases melee strength bonus. Requires Mercantile level 20 to purchase.</string> <!-- untranslated -->
-    <string name="item_amulet_of_the_kraken_name">Amulet Of The Kraken</string> <!-- untranslated -->
+    <string name="item_amulet_of_the_kraken_name">Амулет Кракена</string>
     <string name="item_arcane_grappling_hook_name">Arcane Grappling Hook</string> <!-- untranslated -->
     <string name="item_arcane_staff_name">Arcane Staff</string> <!-- untranslated -->
     <string name="item_archers_guild_cape_name">Плащ Гільдії Лучників</string>
     <string name="item_archers_ring_name">Archers Ring</string> <!-- untranslated -->
     <string name="item_archers_ring_desc">Increases ranged accuracy. Requires Mercantile level 60 to purchase.</string> <!-- untranslated -->
     <string name="item_attack_cape_name">Attack Cape</string> <!-- untranslated -->
-    <string name="item_baby_kraken_name">Baby Kraken</string> <!-- untranslated -->
+    <string name="item_baby_kraken_name">Малюк Кракен</string>
     <string name="item_balrog_name">Gothic Ember, Ancient Flame of the Deep</string> <!-- untranslated -->
     <string name="item_balrog_whip_name">Gothic Ember\'s Flaming Whip</string> <!-- untranslated -->
     <string name="item_balrog_wings_name">Gothic Ember Wings</string> <!-- untranslated -->
     <string name="item_beef_name">Cooked Beef</string> <!-- untranslated -->
-    <string name="item_berserker_ring_name">Berserker Ring</string> <!-- untranslated -->
+    <string name="item_berserker_ring_name">Кільце Берсерка</string>
     <string name="item_berserker_ring_desc">Increases melee strength. Requires Mercantile level 60 to purchase.</string> <!-- untranslated -->
     <string name="item_blessed_fishing_rod_name">Blessed Fishing Rod</string> <!-- untranslated -->
     <string name="item_bronze_arrow_tip_name">Bronze Arrow Tips</string> <!-- untranslated -->
@@ -824,7 +824,7 @@
     <string name="item_crafting_guild_cape_name">Crafting Guild Cape</string> <!-- untranslated -->
     <string name="item_deep_iron_pickaxe_name">Deep Iron Pickaxe</string> <!-- untranslated -->
     <string name="item_defense_cape_name">Defense Cape</string> <!-- untranslated -->
-    <string name="item_demon_lord_name">Demon Lord</string> <!-- untranslated -->
+    <string name="item_demon_lord_name">Демон Лорд</string>
     <string name="item_divine_frying_pan_name">Divine Frying Pan</string> <!-- untranslated -->
     <string name="item_divine_grappling_hook_name">Divine Grappling Hook</string> <!-- untranslated -->
     <string name="item_divine_hammer_name">Divine Hammer</string> <!-- untranslated -->
@@ -853,7 +853,7 @@
     <string name="item_dwarven_sword_name">Dwarven Sword</string> <!-- untranslated -->
     <string name="item_dwarven_tinderbox_name">Dwarven Tinderbox</string> <!-- untranslated -->
     <string name="item_dwarven_warhammer_name">Dwarven Warhammer</string> <!-- untranslated -->
-    <string name="item_ent_name">Ent</string> <!-- untranslated -->
+    <string name="item_ent_name">Ент</string>
     <string name="item_farming_cape_name">Farming Cape</string> <!-- untranslated -->
     <string name="item_farming_guild_cape_name">Farming Guild Cape</string> <!-- untranslated -->
     <string name="item_firemaking_cape_name">Firemaking Cape</string> <!-- untranslated -->
@@ -878,9 +878,9 @@
     <string name="item_iron_plateskirt_name">Iron Plateskirt</string> <!-- untranslated -->
     <string name="item_iron_square_shield_name">Iron Square Shield</string> <!-- untranslated -->
     <string name="item_ironwood_axe_name">Ironwood Axe</string> <!-- untranslated -->
-    <string name="item_king_black_dragon_name">King Black Dragon</string> <!-- untranslated -->
-    <string name="item_kraken_name">Kraken</string> <!-- untranslated -->
-    <string name="item_kraken_tentacle_name">Kraken Tentacle</string> <!-- untranslated -->
+    <string name="item_king_black_dragon_name">Королівський Чорний Дракон</string>
+    <string name="item_kraken_name">Кракен</string>
+    <string name="item_kraken_tentacle_name">Щупальце Кракена</string>
     <string name="item_mages_guild_cape_name">Mages Guild Cape</string> <!-- untranslated -->
     <string name="item_magic_cape_name">Magic Cape</string> <!-- untranslated -->
     <string name="item_magic_longbow_name">Magic Longbow</string> <!-- untranslated -->

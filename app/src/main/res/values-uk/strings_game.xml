@@ -5,7 +5,7 @@
     <string name="game_level_up">Level up! %1$s is now level %2$d!</string> <!-- untranslated -->
     <!-- Translator note: %1$s = skill display name, %2$d = new level number -->
     <string name="game_level_up_short">%1$s → %2$d</string> <!-- untranslated -->
-    <string name="game_max_level">Maximum level reached!</string> <!-- untranslated -->
+    <string name="game_max_level">Максимальний рівень досягнуто!</string>
 
     <!-- ===== Session result summaries ===== -->
     <string name="game_session_results_title">Session Results</string> <!-- untranslated -->
@@ -26,8 +26,8 @@
     <string name="game_combat_enemy_defeated">%1$s defeated!</string> <!-- untranslated -->
     <!-- Translator note: %1$d = HP restored -->
     <string name="game_combat_food_eaten">Ate food — restored %1$d HP.</string> <!-- untranslated -->
-    <string name="game_combat_player_died">You were defeated.</string> <!-- untranslated -->
-    <string name="game_dungeon_cleared">Dungeon cleared!</string> <!-- untranslated -->
+    <string name="game_combat_player_died">Вас було подолано.</string>
+    <string name="game_dungeon_cleared">Підземелля зачищено!</string>
     <!-- Translator note: %1$s = dungeon display name -->
     <string name="game_dungeon_summary">%1$s complete.</string> <!-- untranslated -->
 
@@ -60,8 +60,8 @@
 
     <!-- ===== Quest messages ===== -->
     <!-- Translator note: %1$s = quest display name -->
-    <string name="game_quest_started">Quest started: %1$s</string> <!-- untranslated -->
-    <string name="game_quest_completed">Quest complete: %1$s</string> <!-- untranslated -->
+    <string name="game_quest_started">Квест розпочато: %1$s</string>
+    <string name="game_quest_completed">Квест виконано: %1$s</string>
     <string name="game_quest_abandoned">Quest abandoned.</string> <!-- untranslated -->
     <!-- Translator note: %1$d = current progress, %2$d = target amount -->
     <string name="game_quest_progress">Progress: %1$d / %2$d</string> <!-- untranslated -->
@@ -75,14 +75,14 @@
     <!-- ===== Arena messages ===== -->
     <!-- Translator note: %1$s = opponent display name -->
     <string name="game_arena_challenged">Challenged by %1$s!</string> <!-- untranslated -->
-    <string name="game_arena_victory">Victory!</string> <!-- untranslated -->
-    <string name="game_arena_defeat">Defeated.</string> <!-- untranslated -->
+    <string name="game_arena_victory">Перемога!</string>
+    <string name="game_arena_defeat">Поразка.</string>
     <!-- Translator note: %1$d = coins won -->
     <string name="game_arena_coins_won">Won %1$d coins.</string> <!-- untranslated -->
 
     <!-- ===== Easter egg / dig ===== -->
     <string name="game_dig_you_dig">You dig into the earth…</string> <!-- untranslated -->
-    <string name="game_dig_nothing">You find nothing but dirt.</string> <!-- untranslated -->
+    <string name="game_dig_nothing">Ви нічого не знайшли, крім бруду.</string>
     <!-- Translator note: %1$s = item display name -->
     <string name="game_dig_found">You uncover a %1$s!</string> <!-- untranslated -->
     <!-- Translator note: %1$d = current hole depth in metres -->
