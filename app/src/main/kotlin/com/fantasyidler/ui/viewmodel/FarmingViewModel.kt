@@ -63,6 +63,7 @@ data class FarmingUiState(
     val magicBeanPlanted: Boolean              = false,
     /** Shows the persistent beanstalk-climbed dialog until the player dismisses it. */
     val showBeanClimbDialog: Boolean           = false,
+    val showSessionEndTime: Boolean            = true,
 )
 
 data class HarvestResult(
@@ -135,6 +136,7 @@ class FarmingViewModel @Inject constructor(
             fertilizer       = flags.farmingFertilizer,
             lastFertilizerKey = flags.lastFertilizerKey,
             magicBeanPlanted = flags.magicBeanPlanted,
+            showSessionEndTime = flags.showSessionEndTime,
             now              = now,
         )
     }.flowOn(Dispatchers.Default)
@@ -196,12 +198,15 @@ class FarmingViewModel @Inject constructor(
                     _extra.update { it.copy(snackbarMessage = msg) }
                 } else {
                     val plantedCount = farmingRepo.plantCrops(emptyPatches, crop, ashKey)
+                    // Bulk planting stops at whichever runs out first: seeds or the chosen fertilizer.
+                    val inv = playerRepo.getInventory()
+                    val shortName = if (ashKey != null && (inv[crop.seedName] ?: 0) > 0) GameStrings.itemName(context.withAppLocale(), ashKey) else seedName
                     val msg = if (plantedCount == 0) {
                         if (emptyPatches.isEmpty()) context.withAppLocale().getString(R.string.farming_no_empty_patches)
-                        else context.withAppLocale().getString(R.string.farming_no_seeds_inventory, seedName)
+                        else context.withAppLocale().getString(R.string.farming_no_seeds_inventory, shortName)
                     } else {
                         val base = context.withAppLocale().getString(R.string.farming_planted, plantedCount, seedName)
-                        if (plantedCount < emptyPatches.size) "$base - ${context.withAppLocale().getString(R.string.farming_no_seeds_inventory, seedName)}" else base
+                        if (plantedCount < emptyPatches.size) "$base - ${context.withAppLocale().getString(R.string.farming_no_seeds_inventory, shortName)}" else base
                     }
                     _extra.update { it.copy(snackbarMessage = msg) }
                 }
