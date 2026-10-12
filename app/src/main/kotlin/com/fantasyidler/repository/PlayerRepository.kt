@@ -1383,13 +1383,15 @@ class PlayerRepository @Inject constructor(
         }
         if (skillName == Skills.MAGIC) {
             val magicLevel = levels[Skills.MAGIC] ?: 1
-            val activeSpell = newFlags.activeSpell?.let { gameData.spells[it] }
-            if (activeSpell != null && activeSpell.magicLevelRequired > magicLevel) {
-                val fallback = gameData.spells.values
-                    .filter { it.magicLevelRequired <= magicLevel }
-                    .maxByOrNull { it.magicLevelRequired }
-                newFlags = newFlags.copy(activeSpell = fallback?.name)
-            }
+            val fallback = gameData.spells.values
+                .filter { it.magicLevelRequired <= magicLevel }
+                .maxByOrNull { it.magicLevelRequired }
+                ?.name
+            fun usable(name: String?) = (name?.let { gameData.spells[it] }?.magicLevelRequired ?: 0) <= magicLevel
+            newFlags = newFlags.copy(
+                activeSpell           = if (usable(newFlags.activeSpell)) newFlags.activeSpell else fallback,
+                magicLoadoutSpellName = if (usable(newFlags.magicLoadoutSpellName)) newFlags.magicLoadoutSpellName else fallback,
+            )
         }
         if (skillName == Skills.PRAYER) {
             val prayerLevel = levels[Skills.PRAYER] ?: 1

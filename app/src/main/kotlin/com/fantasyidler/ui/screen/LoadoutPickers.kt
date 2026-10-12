@@ -135,6 +135,9 @@ internal fun SpellLoadoutPicker(
     onSpellSelected: (SpellData?) -> Unit,
 ) {
     var expanded by remember { mutableStateOf(false) }
+    // Unlocked spells strongest first; locked ones (disabled) sink to the bottom.
+    val sortedSpells = availableSpells
+        .sortedWith(compareBy<SpellData> { it.magicLevelRequired > magicLevel }.thenByDescending { it.maxHit })
     Text(
         text     = stringResource(R.string.label_spell),
         style    = MaterialTheme.typography.labelMedium,
@@ -166,7 +169,7 @@ internal fun SpellLoadoutPicker(
             expanded         = expanded,
             onDismissRequest = { expanded = false },
         ) {
-            availableSpells.forEach { spell ->
+            sortedSpells.forEach { spell ->
                 val locked   = spell.magicLevelRequired > magicLevel
                 val infinite = equippedWeapon?.infiniteRunes == "all" || equippedWeapon?.infiniteRunes == spell.runeType
                 val held     = inventory[spell.runeType] ?: 0
@@ -285,7 +288,7 @@ internal fun PotionLoadoutPicker(
         color    = MaterialTheme.colorScheme.onSurfaceVariant,
         modifier = Modifier.padding(vertical = 4.dp),
     )
-    val potionOptions = listOf(null) + availablePotions.keys.toList()
+    val potionOptions = listOf(null) + availablePotions.keys.sortedByDescending { potionEffects[it]?.values?.sum() ?: 0 }
     ExposedDropdownMenuBox(
         expanded         = expanded,
         onExpandedChange = { expanded = it },

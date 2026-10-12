@@ -222,8 +222,8 @@ class TowerViewModel @Inject constructor(
                 equippedWeapons     = equippedWeapons,
                 selectedWeaponSlot  = extra.selectedWeaponSlot ?: flags.activeWeaponSlot,
                 selectedArrowKey    = extra.selectedArrowKey ?: flags.equippedArrows,
-                selectedSpell       = extra.selectedSpell ?: flags.activeSpell?.let { gameData.spells[it] },
-                availableSpells     = gameData.spells.values.filter { it.magicLevelRequired <= magicLevel }.sortedBy { it.magicLevelRequired },
+                selectedSpell       = resolveSpell(extra.selectedSpell, flags, magicLevel),
+                availableSpells     = gameData.spells.values.toList(),
                 magicLevel          = magicLevel,
                 inventory           = inventory,
                 selectedPotionKey   = extra.selectedPotionKey ?: flags.activePotionKey?.takeIf { (inventory[it] ?: 0) > 0 },
@@ -335,7 +335,7 @@ class TowerViewModel @Inject constructor(
                     EquipSlot.ARMOR_SLOTS.sumOf { equipMap[equipped[it]]?.magicDamageBonus ?: 0 } + (weapon?.magicDamageBonus ?: 0)
                 } else 0
 
-                val selectedSpell = _extra.value.selectedSpell ?: flags.activeSpell?.let { gameData.spells[it] }
+                val selectedSpell = resolveSpell(_extra.value.selectedSpell, flags, levels[Skills.MAGIC] ?: 1)
                 val preferredArrow  = (_extra.value.selectedArrowKey ?: flags.equippedArrows)?.takeIf { (inventory[it] ?: 0) > 0 }
 
                 val potionKey     = _extra.value.selectedPotionKey
@@ -450,6 +450,13 @@ class TowerViewModel @Inject constructor(
             ))
         }
     }
+
+    /**
+     * The in-memory pick, unless it's above [magicLevel] (a Magic prestige since it was picked) —
+     * then the saved spell, which prestige already downgraded.
+     */
+    private fun resolveSpell(picked: SpellData?, flags: PlayerFlags, magicLevel: Int): SpellData? =
+        picked?.takeIf { it.magicLevelRequired <= magicLevel } ?: flags.activeSpell?.let { gameData.spells[it] }
 
     fun selectSpell(spell: SpellData?) {
         _extra.update { it.copy(selectedSpell = spell) }
