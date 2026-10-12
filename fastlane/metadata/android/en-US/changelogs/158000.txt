@@ -1,0 +1,20 @@
+• Redesigned the farming patch cards and replaced the fertilizer chips with a dropdown
+• The plant sheet now preselects the best ash you own
+• Potion and spell dropdowns now list the strongest options first
+• The Tower spell dropdown now shows locked spells greyed out, like the Combat tab
+• Added an inventory search box and a missing-only achievements filter to the Profile
+• Added boss defeats to the Collect summary when several sessions finish at once
+• The Quests tab now hides once every quest is complete
+• Fixed chained boss fights casting spells without using runes
+• Fixed dungeons never using up the runes your spells cast
+• Fixed Elder Isle XP previews and the Collect summary leaving out elder level scaling and Sapphire stones
+• Fixed Sapphire stones not showing in batch skill queue estimates and flat XP previews
+• Fixed the Collect summary adding Church XP to Elder Isle sessions
+• Fixed the Elder Isle queue end time using mainland session lengths
+• Fixed validated Elder Isle quests losing their progress after selling or smelting the items
+• Fixed the Champion of the Isle title not being awarded after killing the Last Elder
+• Fixed a spell above your Magic level staying selected after prestiging Magic
+• Fixed worker tasks keeping prepaid ashes when they ended without running
+• Fixed long save-slot ages overflowing the slot card
+• Fixed agility XP estimates going negative on courses far above your level
+• Updated Czech, French, German, Italian, Russian, Ukrainian and Vietnamese translations

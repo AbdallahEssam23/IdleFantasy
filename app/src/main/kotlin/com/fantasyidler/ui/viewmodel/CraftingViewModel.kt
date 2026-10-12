@@ -11,6 +11,7 @@ import com.fantasyidler.data.model.QuestProgress
 import com.fantasyidler.data.model.QueuedAction
 import com.fantasyidler.data.model.SessionFrame
 import com.fantasyidler.data.model.Skills
+import com.fantasyidler.repository.isleXpMult
 import com.fantasyidler.repository.BoostRepository
 import com.fantasyidler.repository.ChurchRepository
 import com.fantasyidler.repository.DailyQuestRepository
@@ -246,7 +247,8 @@ class CraftingViewModel @Inject constructor(
                 }
             } else 0L
             val xpMult = if (selectedRecipe != null) {
-                if (flags.onElderIsle) 1.0
+                // Isle payout: elder level scaling times Sapphires, no mainland boosts.
+                if (flags.onElderIsle) isleXpMult(flags.elderSkillLevels[selectedRecipe.skillName] ?: 1, flags.embeddedSigils)
                 else {
                     val boostMult = if (flags.ironman) 1.0
                                     else (if (flags.xpBoostExpiresAt > System.currentTimeMillis()) 2.0 else 1.0) * ChurchRepository.xpMultiplier(flags, blessingPrayerCapeMult(player, flags, gameData), gameData.blessings)
@@ -506,13 +508,14 @@ class CraftingViewModel @Inject constructor(
                 val totalOutput = qty * recipe.outputQty
                 val xpQueueMult = if (isElder) 1.0 else (if (flags.ironman) 1.0 else (if (flags.xpBoostExpiresAt > System.currentTimeMillis()) 2.0 else 1.0) * ChurchRepository.xpMultiplier(flags, blessingPrayerCapeMult(player, flags, gameData), gameData.blessings))
                 val queuePetPct = if (isElder) 0 else petBoostFor(player.pets, recipe.skillName, flags.ironman)
+                val isleMult = if (isElder) isleXpMult(flags.elderSkillLevels[recipe.skillName] ?: 1, flags.embeddedSigils) else 1.0
                 val action = QueuedAction(
                     skillName           = recipe.skillName,
                     activityKey         = recipe.key,
                     skillDisplayName    = recipe.skillName.replaceFirstChar { it.uppercase() },
                     qty                 = qty,
                     outputQty           = if (totalOutput != qty) totalOutput else 0,
-                    estimatedXpGain     = (qty * recipe.xpPerItem * xpQueueMult * toolEff * (1.0 + queuePetPct / 100.0)).toLong(),
+                    estimatedXpGain     = (qty * recipe.xpPerItem * xpQueueMult * toolEff * (1.0 + queuePetPct / 100.0) * isleMult).toLong(),
                     estimatedDurationMs = qty.toLong() * perItemMs,
                     xpBoostMultAtQueue  = xpQueueMult,
                     catalystKey         = ashKey,

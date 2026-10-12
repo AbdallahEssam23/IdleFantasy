@@ -26,6 +26,7 @@ import com.fantasyidler.repository.GameDataRepository
 import com.fantasyidler.repository.GuildRepository
 import com.fantasyidler.repository.PlayerRepository
 import com.fantasyidler.repository.predictionXpMult
+import com.fantasyidler.repository.isleXpMult
 import com.fantasyidler.repository.DailyQuestRepository
 import com.fantasyidler.repository.QuestRepository
 import com.fantasyidler.repository.WeeklyQuestRepository
@@ -255,7 +256,11 @@ class SkillsViewModel @Inject constructor(
                 cookingEfficiency     = if (flags.onElderIsle) 1.0f else gameData.toolEfficiency(equipped[EquipSlot.FRYING_PAN],     EquipSlot.FRYING_PAN,     0, skillLevels = levels, heirloomXp = flags.heirloomXp),
                 xpBonusMult           = if (flags.ironman || flags.onElderIsle) 1.0f
                                         else (if (flags.xpBoostExpiresAt > System.currentTimeMillis()) 2.0f else 1.0f) * ChurchRepository.xpMultiplier(flags, capeMult, gameData.blessings) * sigilXpMult(flags.embeddedSigils).toFloat(),
-                xpMultBySkill         = Skills.ALL.associateWith { skill -> predictionXpMult(flags.ironman, flags.onElderIsle, boostRepo.xpMultiplier(skill, flags, capeMult) * sigilXpMult(flags.embeddedSigils)) },
+                // Isle rows show the isle payout rate: elder level scaling times Sapphires.
+                xpMultBySkill         = Skills.ALL.associateWith { skill ->
+                    if (flags.onElderIsle) isleXpMult(flags.elderSkillLevels[skill] ?: 1, flags.embeddedSigils)
+                    else predictionXpMult(flags.ironman, false, boostRepo.xpMultiplier(skill, flags, capeMult) * sigilXpMult(flags.embeddedSigils))
+                },
                 blessingXpPct         = blessingXpPercent(flags.ironman, flags.onElderIsle, ChurchRepository.xpMultiplier(flags, capeMult, gameData.blessings)),
                 petBoosts             = listOf(Skills.MINING, Skills.WOODCUTTING, Skills.FISHING, Skills.AGILITY)
                     .associateWith { if (flags.ironman || flags.onElderIsle) 0 else petBoostFor(player.pets, it) },
@@ -1019,7 +1024,8 @@ class SkillsViewModel @Inject constructor(
                 else               -> 0L
             }
             val petBoostedXp = if (petBoostPct > 0) (rawXp * (1.0 + petBoostPct / 100.0)).toLong() else rawXp
-            val sigilMult = if (isIsle) 1.0 else sigilXpMult(gatherFlags.embeddedSigils)
+            // Isle payout applies elder level scaling and Sapphires in place of mainland boosts.
+            val sigilMult = if (isIsle) isleXpMult(gatherLevels[skillName] ?: 1, gatherFlags.embeddedSigils) else sigilXpMult(gatherFlags.embeddedSigils)
             val estimatedXpGain = (petBoostedXp * xpQueueMult * prestigeMult * sigilMult).toLong()
             val floorReductionMin = if (isIsle) 0.0 else boostRepo.sessionFloorReductionMin(gatherFlags)
             val chronosMult     = if (isIsle) 1.0f else townRepo.playerSessionDurationMultiplier(gatherFlags)

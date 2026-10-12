@@ -44,6 +44,40 @@ internal fun capeKeyForSkill(skill: String): String? = when (skill) {
 private fun PlayerFlags.plusSeen(keys: Collection<String>): PlayerFlags =
     if (keys.isEmpty()) this else copy(seenItemKeys = seenItemKeys + keys)
 
+/**
+ * Elder-XP level scaling: action XP scales with the current elder skill level so the
+ * grind never plateaus even with a small activity pool. +5% XP per elder level (level
+ * 1 = 1x, level 30 = 2.45x, level 60 = 3.95x, level 99 = ~5.9x).
+ */
+internal fun elderLevelXpMult(elderLevel: Int): Double =
+    1.0 + (elderLevel.coerceAtLeast(1) - 1) * 0.05
+
+/**
+ * Everything an Elder Isle payout multiplies raw frame XP by: elder level scaling times the
+ * embedded Sapphire stack. Payout, previews and the Collect summary all go through this so
+ * isle XP numbers match what is granted.
+ */
+internal fun isleXpMult(elderLevel: Int, embeddedSigils: Map<String, String>): Double =
+    elderLevelXpMult(elderLevel) * (1.0 + embeddedSigils.values.count { it == "elder_sapphire" } * 0.05)
+
+/**
+ * Isle payout XP for a batch of pre-simulated frames. Combat frames scale per skill (each
+ * combat skill has its own elder level); everything else scales by [skillName].
+ */
+internal fun isleFramesXp(
+    frames: List<SessionFrame>,
+    skillName: String,
+    elderLevels: Map<String, Int>,
+    embeddedSigils: Map<String, String>,
+): Long {
+    val bySkill = mutableMapOf<String, Long>()
+    for (f in frames) {
+        if (f.xpBySkill.isNotEmpty()) for ((skill, xp) in f.xpBySkill) bySkill[skill] = (bySkill[skill] ?: 0L) + xp
+        else bySkill[skillName] = (bySkill[skillName] ?: 0L) + f.xpGain
+    }
+    return bySkill.entries.sumOf { (skill, xp) -> (xp * isleXpMult(elderLevels[skill] ?: 1, embeddedSigils)).toLong() }
+}
+
 enum class XpBoostPurchaseResult { SUCCESS, NOT_ENOUGH_COINS, ALREADY_ACTIVE, WEEKLY_LIMIT_REACHED }
 
 enum class PrestigeActionResult { SUCCESS, NOT_ENOUGH_POINTS, LOCKED, COOLDOWN, INVALID, CANT_AFFORD }
@@ -265,15 +299,6 @@ class PlayerRepository @Inject constructor(
     }
 
     /**
-     * Elder-XP level scaling — action XP scales with the current elder skill level so the
-     * grind never plateaus even with a small activity pool. +5% XP per elder level (level
-     * 1 = 1x, level 30 = 2.45x, level 60 = 3.95x, level 99 = ~5.9x). Applied on top of the
-     * activity's base XP at collection time.
-     */
-    private fun elderXpMultiplier(elderLevel: Int): Double =
-        1.0 + (elderLevel.coerceAtLeast(1) - 1) * 0.05
-
-    /**
      * Bonuses aggregated from Sigil Stones embedded across all Elder pieces. Each stone
      * of a colour contributes its full bonus; equipping multiple of the same colour stacks
      * linearly. Applied on top of elder-XP level scaling at collection time.
@@ -323,12 +348,13 @@ class PlayerRepository @Inject constructor(
      * Elder Isle multi-skill collection (combat sessions where XP splits across attack/str/def/hp).
      * Routes each skill's XP into PlayerFlags.elderSkillXp; items into shared inventory. No cape
      * awards, no XP boosts, no heirloom mirror — isle is walled off from mainland bonuses.
+     * Returns the XP actually granted per skill, for the Collect summary.
      */
     suspend fun applyElderMultiSkillResults(
         xpPerSkill: Map<String, Long>,
         itemsGained: Map<String, Int>,
         coinsGained: Long,
-    ) = playerMutex.withLock {
+    ): Map<String, Long> = playerMutex.withLock {
         val player    = getOrCreatePlayer()
         val flags: PlayerFlags = json.decodeFromString(player.flags)
         val inventory: MutableMap<String, Int> = json.decodeFromString(player.inventory)
@@ -336,9 +362,11 @@ class PlayerRepository @Inject constructor(
         val bonuses = sigilBonusesFrom(flags)
         val newElderXp = flags.elderSkillXp.toMutableMap()
         val newElderLevels = flags.elderSkillLevels.toMutableMap()
+        val granted = mutableMapOf<String, Long>()
         for ((skill, xp) in xpPerSkill) {
             val currentLevel = flags.elderSkillLevels[skill] ?: 1
-            val scaled = (xp * elderXpMultiplier(currentLevel) * bonuses.xpMult).toLong()
+            val scaled = (xp * isleXpMult(currentLevel, flags.embeddedSigils)).toLong()
+            granted[skill] = scaled
             val updated = (newElderXp[skill] ?: 0L) + scaled
             newElderXp[skill]     = updated
             newElderLevels[skill] = XpTable.levelForXp(updated)
@@ -357,25 +385,27 @@ class PlayerRepository @Inject constructor(
                 ).plusSeen(boostedItems.keys)),
             )
         )
+        granted
     }
 
     /**
      * Elder Isle session collection: routes XP into PlayerFlags.elderSkillXp (separate pool
      * from mainland skill_xp) and adds items to the shared inventory. No cape awards, no
      * XP boosts, no heirloom mirroring — the isle is walled off from mainland bonuses.
+     * Returns the XP actually granted, for the Collect summary.
      */
     suspend fun applyElderSessionResults(
         skillName: String,
         xpGained: Long,
         itemsGained: Map<String, Int>,
-    ) = playerMutex.withLock {
+    ): Long = playerMutex.withLock {
         val player    = getOrCreatePlayer()
         val flags: PlayerFlags = json.decodeFromString(player.flags)
         val inventory: MutableMap<String, Int> = json.decodeFromString(player.inventory)
 
         val currentLevel = flags.elderSkillLevels[skillName] ?: 1
         val bonuses = sigilBonusesFrom(flags)
-        val scaledXp = (xpGained * elderXpMultiplier(currentLevel) * bonuses.xpMult).toLong()
+        val scaledXp = (xpGained * isleXpMult(currentLevel, flags.embeddedSigils)).toLong()
         val boostedItems = scaleLootWithSigils(itemsGained, bonuses)
         val newElderXp = flags.elderSkillXp.toMutableMap().also {
             it[skillName] = (it[skillName] ?: 0L) + scaledXp
@@ -394,6 +424,7 @@ class PlayerRepository @Inject constructor(
                 ).plusSeen(itemsGained.keys)),
             )
         )
+        scaledXp
     }
 
     /** Subtract XP from a skill, flooring at 0. Recalculates level. */

@@ -25,6 +25,7 @@ import com.fantasyidler.repository.GuildRepository
 import com.fantasyidler.repository.MonumentRepository
 import com.fantasyidler.repository.PlayerRepository
 import com.fantasyidler.repository.predictionXpMult
+import com.fantasyidler.repository.isleFramesXp
 import com.fantasyidler.simulator.PrestigeBoosts
 import com.fantasyidler.repository.QuestRepository
 import com.fantasyidler.repository.QueuedSessionStarter
@@ -139,21 +140,12 @@ internal fun splitCoinBonus(combined: Long, blessingMult: Float, petMult: Float)
 }
 
 /**
- * Collect-time church XP multiplier with Elder Isle gate (issue #2057).
- * Mirrors `predictionXpMult` (#1930) and `blessingXpPercent` (#1941):
- * isle sessions run at base rates, so church must resolve to 1.0 there.
- * Mainland keeps the live church mult. Ironman is always base.
- */
-internal fun collectBlessingXpMult(isIronman: Boolean, isIsle: Boolean, churchMult: Float): Float =
-    if (isIronman || isIsle) 1.0f else churchMult
-
-/**
  * Collect dialog display math split by provenance (issue #2057).
  * `totalXp` is the stored pre-blessing amount for one skill, `isleXp` the
- * isle portion of it (0 for pure mainland). Mainland keeps boost+church,
- * isle keeps boost at base church (1.0). Returns (displayValue, churchBonus).
- * Boost itself is out of scope (#1930 already gates previews; 2x on isle
- * display is declared separately) so it applies to both portions here.
+ * isle portion of it (0 for pure mainland). Mainland keeps boost+church; the
+ * isle portion is already the granted amount (elder scaling and Sapphires
+ * baked in by the payout) and takes neither boost nor church.
+ * Returns (displayValue, churchBonus).
  */
 internal fun collectSkillDisplayXp(
     totalXp: Long,
@@ -164,9 +156,8 @@ internal fun collectSkillDisplayXp(
     val isle = isleXp.coerceIn(0L, totalXp)
     val mainland = totalXp - isle
     val mainlandBase = mainland * boostFactor
-    val isleBase = isle * boostFactor
     val mainlandDisplay = (mainlandBase.toDouble() * churchMult).toLong()
-    val display = mainlandDisplay + isleBase
+    val display = mainlandDisplay + isle
     val bonus = (mainlandDisplay - mainlandBase).coerceAtLeast(0L)
     return display to bonus
 }
@@ -451,10 +442,13 @@ class HomeViewModel @Inject constructor(
                                }
             val innXpMult = townRepo.workerXpMultiplier(flags)
             val capeMult = blessingPrayerCapeMult(player, flags, gameData)
-            val sessionXpGain: (SkillSession?) -> Long = { s ->
+            val sessionXpGain: (SkillSession?) -> Long = cardXp@{ s ->
                 if (s == null || s.skillName in listOf("combat", "boss", "expedition", "farming", "tower", "carnival")) 0L
                 else try {
                     val cardFrames = json.decodeFromString<List<SessionFrame>>(s.frames)
+                    // Isle sessions skip every mainland multiplier but the payout still applies
+                    // elder level scaling and Sapphires, so show exactly what it will grant.
+                    if (s.isElderSession) return@cardXp isleFramesXp(cardFrames, s.skillName, flags.elderSkillLevels, flags.embeddedSigils)
                     val base = cardFrames.sumOf { it.xpGain.toLong() }
                     // Same multiplier chain collection applies (applySessionResults), so the
                     // card matches the eventual payout and reacts to boosts live (issue #1748).
@@ -807,6 +801,11 @@ class HomeViewModel @Inject constructor(
             val (coinBlessingBonus, coinPetBonus) = splitCoinBonus(acc.combinedCoins, blessingChurchCoinMult, petCoinMult)
             val sortedXpEntries   = acc.combinedXpBySkill.entries.sortedByDescending { it.value }
             val singleXpFactor    = acc.combinedXpBySkill.keys.firstOrNull()?.let(boostFactorFor) ?: 1L
+            // The isle payout never applies the XP boost, so a skill earned only on the isle
+            // must not be labelled as boosted.
+            val labelBoostFactor  = { skill: String ->
+                if ((acc.combinedIsleXpBySkill[skill] ?: 0L) >= (acc.combinedXpBySkill[skill] ?: 0L)) 1L else boostFactorFor(skill)
+            }
             // Issue #2057: isle XP runs at base church (1.0). Split each skill's total
             // into mainland (church applies) + isle (base) so mixed batches stay correct.
             // blessingXpMult itself stays ironman-gated only; the isle gate lives per skill.
@@ -847,10 +846,10 @@ class HomeViewModel @Inject constructor(
                 runesReclaimedLines  = acc.combinedRunesReclaimed.entries.sortedByDescending { it.value }
                                          .map { (key, qty) -> Pair(GameStrings.itemName(context,key), "+$qty") },
                 boneBuriedLines  = boneBuriedLines,
-                boostWasActive   = acc.combinedXpBySkill.keys.any { boostFactorFor(it) > 1L },
+                boostWasActive   = acc.combinedXpBySkill.keys.any { labelBoostFactor(it) > 1L },
                 xpLineBoostFactors = if (useTotalLabel) emptyList()
-                                     else sortedXpEntries.map { (skill, _) -> boostFactorFor(skill) },
-                totalXpBoostFactor = if (useTotalLabel) singleXpFactor else 1L,
+                                     else sortedXpEntries.map { (skill, _) -> labelBoostFactor(skill) },
+                totalXpBoostFactor = if (useTotalLabel) acc.combinedXpBySkill.keys.firstOrNull()?.let(labelBoostFactor) ?: 1L else 1L,
                 xpLineBonuses    = xpLineBonuses,
                 coinBlessingBonus = coinBlessingBonus,
                 coinPetBonus      = coinPetBonus,
@@ -973,7 +972,7 @@ class HomeViewModel @Inject constructor(
             val elderPets = elderItems.filterKeys { it in ctx.petIds }
             val elderLoot = elderItems.filterKeys { it !in ctx.petIds }
             if (!grantXp) elderXp.clear()
-            playerRepo.applyElderMultiSkillResults(elderXp, elderLoot, elderCoins)
+            val elderXpGranted = playerRepo.applyElderMultiSkillResults(elderXp, elderLoot, elderCoins)
             for ((id, _) in elderPets) {
                 val pd = gameData.pets[id] ?: continue
                 if (playerRepo.addPetIfNew(id, pd.boostPercent))
@@ -993,7 +992,7 @@ class HomeViewModel @Inject constructor(
                 acc.dailyKills[session.activityKey] = (acc.dailyKills[session.activityKey] ?: 0) + 1
                 acc.combinedKills[session.activityKey] = (acc.combinedKills[session.activityKey] ?: 0) + 1
             }
-            for ((skill, xp) in elderXp) {
+            for ((skill, xp) in elderXpGranted) {
                 acc.combinedXpBySkill[skill] = (acc.combinedXpBySkill[skill] ?: 0L) + xp
                 acc.combinedIsleXpBySkill[skill] = (acc.combinedIsleXpBySkill[skill] ?: 0L) + xp
             }
@@ -1128,7 +1127,7 @@ class HomeViewModel @Inject constructor(
             val elderPets = elderItems.filterKeys { it in ctx.petIds }
             val elderLoot = elderItems.filterKeys { it !in ctx.petIds }
             if (!grantXp) elderXpPerSkill.clear()
-            playerRepo.applyElderMultiSkillResults(elderXpPerSkill, elderLoot, elderCoins)
+            val elderXpGranted = playerRepo.applyElderMultiSkillResults(elderXpPerSkill, elderLoot, elderCoins)
             for ((id, _) in elderPets) {
                 val pd = gameData.pets[id] ?: continue
                 if (playerRepo.addPetIfNew(id, pd.boostPercent))
@@ -1139,6 +1138,7 @@ class HomeViewModel @Inject constructor(
             val elderRunesRec  = elderRunes.mapValues  { (_, qty) -> (qty * (reclaimChance(skillLvls[Skills.MAGIC] ?: 1) + boostRepo.runeReclaimBonus(ctx.flags)).coerceAtMost(0.95)).toInt() }.filterValues { it > 0 }
             if (elderFood.isNotEmpty())       playerRepo.consumeItems(elderFood)
             if (elderArrows.isNotEmpty())     playerRepo.consumeItems(elderArrows)
+            if (elderRunes.isNotEmpty())      playerRepo.consumeItems(elderRunes)
             if (elderArrowsRec.isNotEmpty())  playerRepo.addItems(elderArrowsRec)
             if (elderRunesRec.isNotEmpty())   playerRepo.addItems(elderRunesRec)
             // Isle dungeon runs feed the story quest counters (dungeonRuns[key]) even though
@@ -1156,7 +1156,7 @@ class HomeViewModel @Inject constructor(
                     survived     = !elderDied,
                 ))
             ))
-            for ((skill, xp) in elderXpPerSkill) {
+            for ((skill, xp) in elderXpGranted) {
                 acc.combinedXpBySkill[skill] = (acc.combinedXpBySkill[skill] ?: 0L) + xp
                 acc.combinedIsleXpBySkill[skill] = (acc.combinedIsleXpBySkill[skill] ?: 0L) + xp
             }
@@ -1233,6 +1233,7 @@ class HomeViewModel @Inject constructor(
         val runesReclaimed  = runes.mapValues  { (_, qty) -> (qty * (reclaimChance(skillLvls[Skills.MAGIC] ?: 1) + boostRepo.runeReclaimBonus(ctx.flags)).coerceAtMost(0.95)).toInt() }.filterValues { it > 0 }
         if (food.isNotEmpty())          playerRepo.consumeItems(food)
         if (arrows.isNotEmpty())        playerRepo.consumeItems(arrows)
+        if (runes.isNotEmpty())         playerRepo.consumeItems(runes)
         if (arrowsReclaimed.isNotEmpty()) playerRepo.addItems(arrowsReclaimed)
         if (runesReclaimed.isNotEmpty())  playerRepo.addItems(runesReclaimed)
         val dungeonRunFlags = playerRepo.getFlags()
@@ -1301,14 +1302,14 @@ class HomeViewModel @Inject constructor(
         if (session.isElderSession || sessionIsIsleByActivity(session)) {
             val elderPets = its.filterKeys { it in ctx.petIds }
             val elderLoot = its.filterKeys { it != "coins" && it !in ctx.petIds }
-            playerRepo.applyElderSessionResults(session.skillName, totalXp, elderLoot)
+            val elderXpGranted = playerRepo.applyElderSessionResults(session.skillName, totalXp, elderLoot)
             for ((id, _) in elderPets) {
                 val pd = gameData.pets[id] ?: continue
                 if (playerRepo.addPetIfNew(id, pd.boostPercent))
                     acc.petFoundName = GameStrings.petName(context, pd.id)
             }
-            acc.combinedXpBySkill[session.skillName] = (acc.combinedXpBySkill[session.skillName] ?: 0L) + totalXp
-            acc.combinedIsleXpBySkill[session.skillName] = (acc.combinedIsleXpBySkill[session.skillName] ?: 0L) + totalXp
+            acc.combinedXpBySkill[session.skillName] = (acc.combinedXpBySkill[session.skillName] ?: 0L) + elderXpGranted
+            acc.combinedIsleXpBySkill[session.skillName] = (acc.combinedIsleXpBySkill[session.skillName] ?: 0L) + elderXpGranted
             for ((item, qty) in elderLoot) acc.combinedItems[item] = (acc.combinedItems[item] ?: 0) + qty
             return
         }
@@ -1488,6 +1489,7 @@ class HomeViewModel @Inject constructor(
                 repeatCount         = repeatCount,
                 estimatedDurationMs = session.endsAt - session.startedAt,
                 estimatedXpGain     = if (session.skillName in listOf("carnival", "expedition", "tower")) 0L
+                                      else if (session.isElderSession) isleFramesXp(frames, session.skillName, flags.elderSkillLevels, flags.embeddedSigils)
                                       else (rawXpGain * xpQueueMult).toLong(),
                 xpBoostMultAtQueue  = xpQueueMult,
                 weaponSlot          = weaponSlot,

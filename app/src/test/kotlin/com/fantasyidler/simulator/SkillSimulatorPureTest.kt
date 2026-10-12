@@ -34,6 +34,12 @@ class SkillSimulatorPureTest {
     }
 
     @Test
+    fun `estimateAgilityXp floors at zero far below the requirement`() {
+        // Level 1 on a level 50 course: 0.80 - 0.98 would be a negative rate (issue #1989).
+        assertEquals(0L, SkillSimulator.estimateAgilityXp(10, 50, 1))
+    }
+
+    @Test
     fun `estimateAgilityXp is monotonically non-decreasing in current level`() {
         var previous = Long.MIN_VALUE
         for (level in 1..99) {

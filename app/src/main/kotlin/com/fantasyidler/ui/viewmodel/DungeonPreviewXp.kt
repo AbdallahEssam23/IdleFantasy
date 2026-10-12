@@ -5,6 +5,7 @@ import com.fantasyidler.data.model.EquipSlot
 import com.fantasyidler.data.model.OwnedPet
 import com.fantasyidler.data.model.PlayerFlags
 import com.fantasyidler.data.model.Skills
+import com.fantasyidler.repository.isleFramesXp
 import com.fantasyidler.repository.BoostRepository
 import com.fantasyidler.repository.ChurchRepository
 import com.fantasyidler.repository.GameDataRepository
@@ -123,5 +124,7 @@ internal fun estimateDungeonPreviewXp(
         doubleHitChance     = boostRepo.doubleHitChance(flags),
         secondChance        = boostRepo.secondChanceActive(flags),
     )
+    // Isle dungeons pay elder level scaling and Sapphires per combat skill.
+    if (flags.onElderIsle) return isleFramesXp(result.frames, "combat", flags.elderSkillLevels, flags.embeddedSigils)
     return result.frames.sumOf { it.xpGain.toLong() }
 }
