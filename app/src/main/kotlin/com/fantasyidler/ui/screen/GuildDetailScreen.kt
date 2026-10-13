@@ -55,6 +55,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.fantasyidler.R
 import com.fantasyidler.repository.GuildDailyWithProgress
 import com.fantasyidler.repository.GuildQuestWithProgress
+import com.fantasyidler.repository.GuildRepository
 import com.fantasyidler.ui.viewmodel.GuildDetailViewModel
 import com.fantasyidler.util.GameStrings
 import com.fantasyidler.util.dailyResetClockTime
@@ -139,7 +140,8 @@ fun GuildDetailScreen(
             return@Scaffold
         }
 
-        val pagerState     = rememberPagerState(pageCount = { 2 })
+        val questsDone     = state.guildLevel >= GuildRepository.DAILIES_REQUIRED_PER_TIER.size
+        val pagerState     = rememberPagerState(pageCount = { if (questsDone) 1 else 2 })
         val scope          = rememberCoroutineScope()
         val claimableQuests = state.quests.count { !it.completed && it.progress >= it.effectiveAmount && state.guildLevel >= it.quest.guildLevelRequired }
         val claimableDailies = state.dailies.count { !it.claimed && it.progress >= it.template.amount }
@@ -153,7 +155,7 @@ fun GuildDetailScreen(
                 guildUnlocked             = state.guildUnlocked,
             )
 
-            TabRow(selectedTabIndex = pagerState.currentPage) {
+            if (!questsDone) TabRow(selectedTabIndex = pagerState.currentPage) {
                 val questLabel = stringResource(R.string.guild_tab_quests).let {
                     if (claimableQuests > 0) "$it ($claimableQuests)" else it
                 }
@@ -173,7 +175,7 @@ fun GuildDetailScreen(
             }
 
             HorizontalPager(state = pagerState, modifier = Modifier.weight(1f)) { page ->
-                when (page) {
+                when (if (questsDone) 1 else page) {
                     0 -> GuildQuestsTab(
                         quests        = state.quests,
                         guildLevel    = state.guildLevel,
