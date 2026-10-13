@@ -2,114 +2,114 @@
 <resources>
     <!-- ===== Level-up messages ===== -->
     <!-- Translator note: %1$d = new level number, %2$s = skill display name -->
-    <string name="game_level_up">Level up! %1$s is now level %2$d!</string> <!-- untranslated -->
+    <string name="game_level_up">ارتفع مستوى %1$s إلى المستوى %2$d!</string>
     <!-- Translator note: %1$s = skill display name, %2$d = new level number -->
-    <string name="game_level_up_short">%1$s → %2$d</string> <!-- untranslated -->
-    <string name="game_max_level">Maximum level reached!</string> <!-- untranslated -->
+    <string name="game_level_up_short">%1$s → %2$d</string>
+    <string name="game_max_level">بلغت الحد الأقصى للمستوى!</string>
 
     <!-- ===== Session result summaries ===== -->
-    <string name="game_session_results_title">Session Results</string> <!-- untranslated -->
+    <string name="game_session_results_title">نتائج الجلسة</string>
     <!-- Translator note: %1$s = skill display name -->
-    <string name="game_session_summary_header">%1$s session complete</string> <!-- untranslated -->
+    <string name="game_session_summary_header">اكتملت جلسة %1$s</string>
     <!-- Translator note: %1$s = formatted XP amount (e.g. "1,234") -->
-    <string name="game_session_xp_total">+%1$s XP earned</string> <!-- untranslated -->
-    <string name="game_session_no_items">No items collected</string> <!-- untranslated -->
-    <string name="game_session_no_level_ups">No level ups this session</string> <!-- untranslated -->
+    <string name="game_session_xp_total">+%1$s من نقاط الخبرة المكتسبة</string>
+    <string name="game_session_no_items">لم تُجمع أي عناصر</string>
+    <string name="game_session_no_level_ups">لم يرتفع أي مستوى في هذه الجلسة</string>
     <!-- Translator note: %1$d = number of level ups -->
-    <string name="game_session_level_up_count">%1$d level up!</string> <!-- untranslated -->
+    <string name="game_session_level_up_count">ارتفع المستوى %1$d مرة!</string>
 
     <!-- ===== Combat messages ===== -->
     <!-- Translator note: %1$s = player or enemy name, %2$d = damage amount -->
-    <string name="game_combat_hit">%1$s hits for %2$d damage.</string> <!-- untranslated -->
-    <string name="game_combat_miss">%1$s misses!</string> <!-- untranslated -->
+    <string name="game_combat_hit">أصاب %1$s الهدف وألحق به %2$d من الضرر.</string>
+    <string name="game_combat_miss">أخفق %1$s في إصابة الهدف!</string>
     <!-- Translator note: %1$s = enemy display name -->
-    <string name="game_combat_enemy_defeated">%1$s defeated!</string> <!-- untranslated -->
+    <string name="game_combat_enemy_defeated">هُزم %1$s!</string>
     <!-- Translator note: %1$d = HP restored -->
-    <string name="game_combat_food_eaten">Ate food — restored %1$d HP.</string> <!-- untranslated -->
-    <string name="game_combat_player_died">You were defeated.</string> <!-- untranslated -->
-    <string name="game_dungeon_cleared">Dungeon cleared!</string> <!-- untranslated -->
+    <string name="game_combat_food_eaten">تناولت طعامًا — استُعيدت %1$d من نقاط الصحة.</string>
+    <string name="game_combat_player_died">لقد هُزمت.</string>
+    <string name="game_dungeon_cleared">تم تطهير الدهليز!</string>
     <!-- Translator note: %1$s = dungeon display name -->
-    <string name="game_dungeon_summary">%1$s complete.</string> <!-- untranslated -->
+    <string name="game_dungeon_summary">اكتمل %1$s.</string>
 
     <!-- ===== Farming messages ===== -->
     <!-- Translator note: %1$s = crop display name -->
-    <string name="game_farming_planted">%1$s planted.</string> <!-- untranslated -->
+    <string name="game_farming_planted">زُرع %1$s.</string>
     <!-- Translator note: %1$s = crop display name, %2$d = yield quantity -->
-    <string name="game_farming_harvested">Harvested %2$d %1$s.</string> <!-- untranslated -->
-    <string name="game_farming_all_harvested">All ready patches harvested.</string> <!-- untranslated -->
-    <string name="game_farming_patch_cleared">Patch cleared.</string> <!-- untranslated -->
-    <string name="game_farming_not_ready">This crop is not ready yet.</string> <!-- untranslated -->
+    <string name="game_farming_harvested">حُصد %2$d من %1$s.</string>
+    <string name="game_farming_all_harvested">حُصدت جميع المحاصيل الجاهزة.</string>
+    <string name="game_farming_patch_cleared">أُخليت الرقعة الزراعية.</string>
+    <string name="game_farming_not_ready">لم ينضج هذا المحصول بعد.</string>
     <!-- Translator note: %1$s = crop display name, %2$s = time remaining -->
-    <string name="game_farming_ready_in">%1$s ready in %2$s.</string> <!-- untranslated -->
+    <string name="game_farming_ready_in">سيصبح %1$s جاهزًا خلال %2$s.</string>
 
     <!-- ===== Crafting messages ===== -->
     <!-- Translator note: %1$d = quantity crafted, %2$s = item display name -->
-    <string name="game_crafted">Crafted %1$d %2$s.</string> <!-- untranslated -->
+    <string name="game_crafted">صُنِع %1$d من %2$s.</string>
     <!-- Translator note: %1$s = item display name -->
-    <string name="game_missing_ingredient">Missing ingredient: %1$s.</string> <!-- untranslated -->
+    <string name="game_missing_ingredient">المكوّن المفقود: %1$s.</string>
 
     <!-- ===== Shop messages ===== -->
     <!-- Translator note: %1$d = quantity, %2$s = item display name, %3$d = total cost -->
-    <string name="game_shop_purchased">Bought %1$d %2$s for %3$d coins.</string> <!-- untranslated -->
+    <string name="game_shop_purchased">اشتريت %1$d من %2$s مقابل %3$d من العملات.</string>
     <!-- Translator note: %1$d = quantity, %2$s = item display name, %3$d = coins received -->
-    <string name="game_shop_sold">Sold %1$d %2$s for %3$d coins.</string> <!-- untranslated -->
+    <string name="game_shop_sold">بعت %1$d من %2$s مقابل %3$d من العملات.</string>
 
     <!-- ===== Prayer / burying ===== -->
     <!-- Translator note: %1$s = bone display name, %2$s = formatted XP gained -->
-    <string name="game_bones_buried">Buried %1$s — +%2$s Prayer XP.</string> <!-- untranslated -->
+    <string name="game_bones_buried">دفنت %1$s — +%2$s من نقاط خبرة الصلاة.</string>
 
     <!-- ===== Quest messages ===== -->
     <!-- Translator note: %1$s = quest display name -->
-    <string name="game_quest_started">Quest started: %1$s</string> <!-- untranslated -->
-    <string name="game_quest_completed">Quest complete: %1$s</string> <!-- untranslated -->
-    <string name="game_quest_abandoned">Quest abandoned.</string> <!-- untranslated -->
+    <string name="game_quest_started">بدأت المهمة: %1$s</string>
+    <string name="game_quest_completed">اكتملت المهمة: %1$s</string>
+    <string name="game_quest_abandoned">تُركت المهمة.</string>
     <!-- Translator note: %1$d = current progress, %2$d = target amount -->
-    <string name="game_quest_progress">Progress: %1$d / %2$d</string> <!-- untranslated -->
+    <string name="game_quest_progress">التقدم: %1$d / %2$d</string>
 
     <!-- ===== XP gain messages (shown in session frame log) ===== -->
     <!-- Translator note: %1$s = formatted XP gained this minute -->
-    <string name="game_xp_gained">+%1$s XP</string> <!-- untranslated -->
+    <string name="game_xp_gained">+%1$s من نقاط الخبرة</string>
     <!-- Translator note: %1$s = item display name, %2$d = quantity -->
-    <string name="game_item_received">+%2$d %1$s</string> <!-- untranslated -->
+    <string name="game_item_received">+%2$d %1$s</string>
 
     <!-- ===== Arena messages ===== -->
     <!-- Translator note: %1$s = opponent display name -->
-    <string name="game_arena_challenged">Challenged by %1$s!</string> <!-- untranslated -->
-    <string name="game_arena_victory">Victory!</string> <!-- untranslated -->
-    <string name="game_arena_defeat">Defeated.</string> <!-- untranslated -->
+    <string name="game_arena_challenged">تحدّاك %1$s!</string>
+    <string name="game_arena_victory">انتصار!</string>
+    <string name="game_arena_defeat">هزيمة.</string>
     <!-- Translator note: %1$d = coins won -->
-    <string name="game_arena_coins_won">Won %1$d coins.</string> <!-- untranslated -->
+    <string name="game_arena_coins_won">ربحت %1$d من العملات.</string>
 
     <!-- ===== Easter egg / dig ===== -->
-    <string name="game_dig_you_dig">You dig into the earth…</string> <!-- untranslated -->
-    <string name="game_dig_nothing">You find nothing but dirt.</string> <!-- untranslated -->
+    <string name="game_dig_you_dig">تحفر في الأرض…</string>
+    <string name="game_dig_nothing">لم تجد سوى التراب.</string>
     <!-- Translator note: %1$s = item display name -->
-    <string name="game_dig_found">You uncover a %1$s!</string> <!-- untranslated -->
+    <string name="game_dig_found">عثرت على %1$s!</string>
     <!-- Translator note: %1$d = current hole depth in metres -->
-    <string name="game_dig_depth">The hole is %1$d metres deep.</string> <!-- untranslated -->
-    <string name="game_dig_cooldown">You already dug today. Come back tomorrow.</string> <!-- untranslated -->
+    <string name="game_dig_depth">يبلغ عمق الحفرة %1$d مترًا.</string>
+    <string name="game_dig_cooldown">لقد حفرت اليوم بالفعل. عُد غدًا.</string>
 
     <!-- ===== Equipment slot names ===== -->
-    <string name="equip_slot_weapon_atk">Weapon (Atk)</string> <!-- untranslated -->
-    <string name="equip_slot_weapon_str">Weapon (Str)</string> <!-- untranslated -->
-    <string name="equip_slot_weapon_ranged">Weapon (Ranged)</string> <!-- untranslated -->
-    <string name="equip_slot_weapon_magic">Weapon (Magic)</string> <!-- untranslated -->
-    <string name="equip_slot_weapon">Weapons</string> <!-- untranslated -->
-    <string name="equip_slot_head">Head</string> <!-- untranslated -->
-    <string name="equip_slot_body">Body</string> <!-- untranslated -->
-    <string name="equip_slot_legs">Legs</string> <!-- untranslated -->
-    <string name="equip_slot_boots">Boots</string> <!-- untranslated -->
-    <string name="equip_slot_cape">Cape</string> <!-- untranslated -->
-    <string name="equip_slot_ring">Ring</string> <!-- untranslated -->
-    <string name="equip_slot_necklace">Necklace</string> <!-- untranslated -->
-    <string name="equip_slot_shield">Shield</string> <!-- untranslated -->
-    <string name="equip_slot_pickaxe">Pickaxe</string> <!-- untranslated -->
-    <string name="equip_slot_axe">Axe</string> <!-- untranslated -->
-    <string name="equip_slot_fishing_rod">Fishing Rod</string> <!-- untranslated -->
-    <string name="equip_slot_hoe">Hoe</string> <!-- untranslated -->
-    <string name="equip_slot_frying_pan">Frying Pan</string> <!-- untranslated -->
-    <string name="equip_slot_grappling_hook">Grappling Hook</string> <!-- untranslated -->
-    <string name="equip_slot_hammer">Hammer</string> <!-- untranslated -->
-    <string name="equip_slot_tinderbox">Tinderbox</string> <!-- untranslated -->
-    <string name="equip_slot_lockpick">Lockpick</string> <!-- untranslated -->
+    <string name="equip_slot_weapon_atk">سلاح (هجوم)</string>
+    <string name="equip_slot_weapon_str">سلاح (قوة)</string>
+    <string name="equip_slot_weapon_ranged">سلاح (قتال بعيد)</string>
+    <string name="equip_slot_weapon_magic">سلاح (سحر)</string>
+    <string name="equip_slot_weapon">أسلحة</string>
+    <string name="equip_slot_head">الرأس</string>
+    <string name="equip_slot_body">الجذع</string>
+    <string name="equip_slot_legs">الساقان</string>
+    <string name="equip_slot_boots">الأحذية</string>
+    <string name="equip_slot_cape">العباءة</string>
+    <string name="equip_slot_ring">الخاتم</string>
+    <string name="equip_slot_necklace">القلادة</string>
+    <string name="equip_slot_shield">الدرع</string>
+    <string name="equip_slot_pickaxe">المعول</string>
+    <string name="equip_slot_axe">الفأس</string>
+    <string name="equip_slot_fishing_rod">صنارة الصيد</string>
+    <string name="equip_slot_hoe">المعزقة</string>
+    <string name="equip_slot_frying_pan">مقلاة</string>
+    <string name="equip_slot_grappling_hook">خطاف التسلق</string>
+    <string name="equip_slot_hammer">المطرقة</string>
+    <string name="equip_slot_tinderbox">صندوق إشعال</string>
+    <string name="equip_slot_lockpick">أداة فتح الأقفال</string>
 </resources>
